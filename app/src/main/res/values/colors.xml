@@ -8,5 +8,6 @@
     <color name="bluePrimary">#2035CE</color>
     <color name="blueSecondary">#2595F5</color>
     <color name="blueThird">#EDF1F8</color>
+    <color name="blueButton">#F0F3FF</color>
     <color name="grayButton">#F1F2F5</color>
 </resources>

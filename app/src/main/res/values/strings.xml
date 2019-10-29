@@ -7,5 +7,9 @@
     <string name="password_label">Password</string>
     <string name="email_label">Email Address</string>
     <string name="create_new_account">Create New Account</string>
-    <string name="desc_create_new_account">Please fill up the forms below \nfor informations</string>
+    <string name="desc_create_new_account">Let the world knows yourself \nmore better and ever</string>
+    <string name="desc_selfie_time">Please fill up the forms below \nfor informations</string>
+    <string name="selfi_time">Selfi Time</string>
+    <string name="name_label">Name</string>
+    <string name="bio_label">Bio</string>
 </resources>
