@@ -74,6 +74,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
             <Button
+                android:id="@+id/btn_new_account"
                 android:layout_width="match_parent"
                 android:layout_height="55dp"
                 android:layout_marginStart="48dp"

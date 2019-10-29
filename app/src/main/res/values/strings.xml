@@ -2,6 +2,10 @@
     <string name="app_name">Lat01TiketSaya</string>
     <string name="wisata_jadi_lebih_asyik">Wisata Jadi Lebih Asyik!</string>
     <string name="sign_in">SIGN IN</string>
+    <string name="text_continue">Continue</string>
     <string name="username_label">Username</string>
     <string name="password_label">Password</string>
+    <string name="email_label">Email Address</string>
+    <string name="create_new_account">Create New Account</string>
+    <string name="desc_create_new_account">Please fill up the forms below \nfor informations</string>
 </resources>
