@@ -3,10 +3,13 @@
     <string name="wisata_jadi_lebih_asyik">Wisata Jadi Lebih Asyik!</string>
     <string name="sign_in">SIGN IN</string>
     <string name="text_continue">Continue</string>
+    <string name="text_explore_now">EXPLORE NOW</string>
     <string name="username_label">Username</string>
     <string name="password_label">Password</string>
     <string name="email_label">Email Address</string>
     <string name="create_new_account">Create New Account</string>
+    <string name="kamu_hebat">Kamu Hebat</string>
+    <string name="desc_kamu_hebat">Selamat datang pada TiketSaya \ndan nikmati wisatamu</string>
     <string name="desc_create_new_account">Let the world knows yourself \nmore better and ever</string>
     <string name="desc_selfie_time">Please fill up the forms below \nfor informations</string>
     <string name="selfi_time">Selfi Time</string>
