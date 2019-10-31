@@ -26,4 +26,12 @@
     <string name="monas">Monas</string>
     <string name="ticket_tips">Ticket Tips</string>
     <string name="learn_it_for_many_benefits">Learn it for many benefits</string>
+    <string name="menara_pisa">Menara Pisa</string>
+    <string name="information">Information</string>
+    <string name="wifi_available">WIFI Available</string>
+    <string name="connect_for_any_tourist">Connect for any tourist</string>
+    <string name="_13_festivals">13 Festivals</string>
+    <string name="dance_and_foods">Dance and foods</string>
+    <string name="desc_ticket_detail">The leaning of the Tower of Pisa comes into the story in 1173, when construction began.</string>
+    <string name="buy_ticket">Buy Ticket</string>
 </resources>
