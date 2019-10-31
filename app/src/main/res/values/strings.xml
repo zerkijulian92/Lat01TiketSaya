@@ -13,6 +13,17 @@
     <string name="desc_create_new_account">Let the world knows yourself \nmore better and ever</string>
     <string name="desc_selfie_time">Please fill up the forms below \nfor informations</string>
     <string name="selfi_time">Selfi Time</string>
+    <string name="my_dasboard">My Dashboard</string>
     <string name="name_label">Name</string>
     <string name="bio_label">Bio</string>
+    <string name="traveller">Traveller</string>
+    <string name="main_menus">Main Menus</string>
+    <string name="pisa">Pisa</string>
+    <string name="torri">Torri</string>
+    <string name="pagoda">pagoda</string>
+    <string name="candi">Candi</string>
+    <string name="sphinx">Sphinx</string>
+    <string name="monas">Monas</string>
+    <string name="ticket_tips">Ticket Tips</string>
+    <string name="learn_it_for_many_benefits">Learn it for many benefits</string>
 </resources>

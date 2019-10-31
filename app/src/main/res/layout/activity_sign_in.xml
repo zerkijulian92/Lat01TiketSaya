@@ -10,7 +10,9 @@
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:scrollbars="none">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -38,18 +40,17 @@
                 android:layout_marginEnd="24dp"
                 android:background="@drawable/bg_layout_white"
                 android:orientation="vertical"
+                android:paddingLeft="24dp"
                 android:paddingTop="30dp"
+                android:paddingRight="24dp"
                 android:paddingBottom="30dp"
                 app:layout_constraintEnd_toEndOf="@+id/imageView3"
                 app:layout_constraintStart_toStartOf="@+id/imageView3"
                 app:layout_constraintTop_toBottomOf="@+id/imageView3">
 
-
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="24dp"
-                    android:layout_marginRight="24dp"
                     android:layout_marginBottom="24dp"
                     android:orientation="vertical">
 
@@ -71,13 +72,10 @@
                         android:lines="1"
                         android:paddingLeft="12dp"
                         android:textColor="@android:color/black" />
-
                 </LinearLayout>
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="24dp"
-                    android:layout_marginRight="24dp"
                     android:layout_marginBottom="24dp"
                     android:orientation="vertical">
 
@@ -106,9 +104,6 @@
                     android:id="@+id/btn_sign_in"
                     android:layout_width="match_parent"
                     android:layout_height="55dp"
-                    android:layout_marginLeft="24dp"
-                    android:layout_marginTop="30dp"
-                    android:layout_marginRight="24dp"
                     android:background="@drawable/bg_btn_blue_primary"
                     android:fontFamily="@font/mmedium"
                     android:text="@string/sign_in"

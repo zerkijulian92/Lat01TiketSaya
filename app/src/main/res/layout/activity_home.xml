@@ -1,0 +1,357 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/blueThird"
+    tools:context=".HomeAct">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:scrollbars="none">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingBottom="35dp">
+
+            <View
+                android:id="@+id/view3"
+                android:layout_width="match_parent"
+                android:layout_height="232dp"
+                android:background="@drawable/bg_gradient_blue_primary"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:fontFamily="@font/mregular"
+                android:text="@string/my_dasboard"
+                android:textColor="@android:color/white"
+                android:textSize="22sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/view3" />
+
+            <View
+                android:id="@+id/view4"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="26dp"
+                android:layout_marginTop="26dp"
+                android:background="@drawable/bg_view_circle_picture"
+                app:layout_constraintStart_toStartOf="@+id/view3"
+                app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+            <ImageView
+                android:layout_width="42dp"
+                android:layout_height="42dp"
+                android:layout_gravity="center"
+                android:src="@drawable/icon_nopic"
+                app:layout_constraintBottom_toBottomOf="@+id/view4"
+                app:layout_constraintEnd_toEndOf="@+id/view4"
+                app:layout_constraintStart_toStartOf="@+id/view4"
+                app:layout_constraintTop_toTopOf="@+id/view4" />
+
+            <LinearLayout
+                android:id="@+id/linearLayout2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="24dp"
+                android:orientation="vertical"
+                app:layout_constraintStart_toEndOf="@+id/view4"
+                app:layout_constraintTop_toBottomOf="@+id/textView3">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/mmedium"
+                    android:text="Zerky Yulyandri"
+                    android:textColor="@android:color/white"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/mlight"
+                    android:text="@string/traveller"
+                    android:textColor="@android:color/white"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:layout_marginEnd="24dp"
+                android:fontFamily="@font/mlight"
+                android:text="US$ 329"
+                android:textColor="@color/greenText"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/view3"
+                app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+
+            <LinearLayout
+                android:id="@+id/linearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="100dp"
+                android:layout_marginEnd="24dp"
+                android:background="@drawable/bg_layout_white"
+                android:orientation="vertical"
+                android:paddingLeft="24dp"
+                android:paddingTop="24dp"
+                android:paddingRight="24dp"
+                android:paddingBottom="24dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView3">
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/mmedium"
+                        android:text="@string/main_menus"
+                        android:textColor="@android:color/black"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/mlight"
+                        android:text="Explore the beauty of world"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+                <View
+                    android:layout_marginBottom="16dp"
+                    android:layout_marginTop="16dp"
+                    android:background="@color/grayDevinder"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"/>
+
+                <LinearLayout
+                    android:layout_marginBottom="24dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="3"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="64dp"
+                            android:layout_height="64dp"
+                            android:src="@drawable/icon_pisa"/>
+
+                        <TextView
+                            android:fontFamily="@font/mregular"
+                            android:textColor="@android:color/black"
+                            android:text="@string/pisa"
+                            android:textSize="16sp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="64dp"
+                            android:layout_height="64dp"
+                            android:src="@drawable/icon_torri"/>
+
+                        <TextView
+                            android:fontFamily="@font/mregular"
+                            android:textColor="@android:color/black"
+                            android:text="@string/torri"
+                            android:textSize="16sp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="64dp"
+                            android:layout_height="64dp"
+                            android:src="@drawable/icon_pagoda"/>
+
+                        <TextView
+                            android:fontFamily="@font/mregular"
+                            android:textColor="@android:color/black"
+                            android:text="@string/pagoda"
+                            android:textSize="16sp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_marginBottom="24dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="3"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="64dp"
+                            android:layout_height="64dp"
+                            android:src="@drawable/icon_borobudur"/>
+
+                        <TextView
+                            android:fontFamily="@font/mregular"
+                            android:textColor="@android:color/black"
+                            android:text="@string/candi"
+                            android:textSize="16sp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="64dp"
+                            android:layout_height="64dp"
+                            android:src="@drawable/icon_sphinx"/>
+
+                        <TextView
+                            android:fontFamily="@font/mregular"
+                            android:textColor="@android:color/black"
+                            android:text="@string/sphinx"
+                            android:textSize="16sp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="64dp"
+                            android:layout_height="64dp"
+                            android:src="@drawable/icon_monas"/>
+
+                        <TextView
+                            android:fontFamily="@font/mregular"
+                            android:textColor="@android:color/black"
+                            android:text="@string/monas"
+                            android:textSize="16sp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayout3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="30dp"
+                android:orientation="vertical"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/mmedium"
+                    android:text="@string/ticket_tips"
+                    android:textColor="@android:color/black"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/mlight"
+                    android:text="@string/learn_it_for_many_benefits"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <HorizontalScrollView
+                android:scrollbars="none"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout3">
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:layout_width="227dp"
+                        android:layout_height="98dp"
+                        android:layout_marginRight="14dp"
+                        android:src="@drawable/item_one" />
+
+                    <ImageView
+                        android:layout_width="227dp"
+                        android:layout_height="98dp"
+                        android:layout_marginRight="14dp"
+                        android:src="@drawable/item_two" />
+
+                </LinearLayout>
+            </HorizontalScrollView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

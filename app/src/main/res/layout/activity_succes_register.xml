@@ -10,7 +10,8 @@
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:scrollbars="none">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -54,7 +55,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
             <Button
-                android:id="@+id/btn_continue"
+                android:id="@+id/btn_explore"
                 android:layout_width="match_parent"
                 android:layout_height="55dp"
                 android:layout_marginStart="48dp"
