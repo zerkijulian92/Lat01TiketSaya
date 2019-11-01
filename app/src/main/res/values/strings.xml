@@ -33,5 +33,10 @@
     <string name="_13_festivals">13 Festivals</string>
     <string name="dance_and_foods">Dance and foods</string>
     <string name="desc_ticket_detail">The leaning of the Tower of Pisa comes into the story in 1173, when construction began.</string>
+    <string name="desc_buy_ticket_detail">Anak yang berumur lebih dari 3 tahun wajib membeli tiket.</string>
     <string name="buy_ticket">Buy Ticket</string>
+    <string name="ticket_details">Ticket Details</string>
+    <string name="pisa_city_italy">Pisa City, Italy</string>
+    <string name="pricing">Pricing</string>
+    <string name="pay_now">PAY NOW</string>
 </resources>
