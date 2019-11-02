@@ -10,6 +10,7 @@
     <string name="create_new_account">Create New Account</string>
     <string name="kamu_hebat">Kamu Hebat</string>
     <string name="desc_kamu_hebat">Selamat datang pada TiketSaya \ndan nikmati wisatamu</string>
+    <string name="desc_anda_berhasil">Anda berhasil membeli tiket\ndan selamat berlibur</string>
     <string name="desc_create_new_account">Let the world knows yourself \nmore better and ever</string>
     <string name="desc_selfie_time">Please fill up the forms below \nfor informations</string>
     <string name="selfi_time">Selfi Time</string>
@@ -39,4 +40,6 @@
     <string name="pisa_city_italy">Pisa City, Italy</string>
     <string name="pricing">Pricing</string>
     <string name="pay_now">PAY NOW</string>
+    <string name="selamat_menikmati">Selamat Menikmati</string>
+    <string name="view_tickets">VIEW TICKETS</string>
 </resources>

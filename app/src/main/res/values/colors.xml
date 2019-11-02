@@ -10,6 +10,7 @@
     <color name="blueThird">#EDF1F8</color>
     <color name="blueButton">#F0F3FF</color>
     <color name="grayButton">#F1F2F5</color>
+    <color name="grayText">#B9B9B9</color>
     <color name="grayDevinder">#EDEDED</color>
     <color name="greenText">#3AC2A9</color>
 </resources>

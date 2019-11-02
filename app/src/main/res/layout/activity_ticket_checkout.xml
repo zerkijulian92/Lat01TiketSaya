@@ -295,7 +295,7 @@
                 </LinearLayout>
 
                 <Button
-                    android:id="@+id/btn_continue"
+                    android:id="@+id/btn_buy_ticket"
                     android:layout_width="match_parent"
                     android:layout_height="55dp"
                     android:background="@drawable/bg_btn_green"
