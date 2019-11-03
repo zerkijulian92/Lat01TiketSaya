@@ -7,6 +7,8 @@
     android:background="@color/blueThird"
     tools:context=".RegisterTwoAct">
 
+
+
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -52,8 +54,6 @@
                 app:layout_constraintEnd_toEndOf="@+id/textView3"
                 app:layout_constraintStart_toStartOf="@+id/textView3"
                 app:layout_constraintTop_toBottomOf="@+id/textView3" />
-
-
             <LinearLayout
                 android:id="@+id/linearLayout"
                 android:layout_width="match_parent"
@@ -79,11 +79,24 @@
                        android:layout_height="108dp"
                        android:background="@drawable/bg_view_circle_picture" />
 
-                   <ImageView
-                       android:layout_width="93dp"
-                       android:layout_height="93dp"
-                       android:layout_gravity="center"
-                       android:src="@drawable/icon_nopic" />
+                    <ImageView
+                        android:layout_width="93dp"
+                        android:layout_height="93dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/icon_nopic" />
+
+                    <com.github.florent37.shapeofview.shapes.CircleView
+                        android:layout_width="93dp"
+                        android:layout_height="93dp"
+                        android:layout_gravity="center">
+
+                        <ImageView
+                            android:id="@+id/pic_photo_regis_user"
+                            android:layout_width="100dp"
+                            android:layout_height="93dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/zerkiedit" />
+                    </com.github.florent37.shapeofview.shapes.CircleView>
 
                     <Button
                         android:id="@+id/btn_plus_blue"
@@ -97,7 +110,6 @@
                         android:textSize="22sp" />
 
                 </FrameLayout>
-
                 <LinearLayout
                     android:layout_marginTop="30dp"
                     android:layout_width="match_parent"
