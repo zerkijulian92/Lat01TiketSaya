@@ -62,6 +62,7 @@
                 app:layout_constraintTop_toTopOf="@+id/view4" />
 
             <com.github.florent37.shapeofview.shapes.CircleView
+                android:id="@+id/btn_to_profile"
                 android:layout_width="42dp"
                 android:layout_height="42dp"
                 app:layout_constraintBottom_toBottomOf="@+id/view4"
