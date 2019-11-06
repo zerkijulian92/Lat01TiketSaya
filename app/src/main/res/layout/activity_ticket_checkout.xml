@@ -103,8 +103,8 @@
                     <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="12dp"
-                        android:layout_marginRight="12dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
                         android:orientation="vertical">
 
                         <TextView
@@ -131,21 +131,24 @@
                         android:orientation="horizontal">
 
                         <Button
+                            android:id="@+id/btn_minus"
                             android:layout_width="25dp"
                             android:layout_height="35dp"
                             android:background="@drawable/btnmines" />
 
                         <TextView
+                            android:id="@+id/text_jml_tiket"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="12dp"
                             android:layout_marginRight="12dp"
                             android:fontFamily="@font/mregular"
-                            android:text="2"
+                            android:text="1"
                             android:textColor="@android:color/black"
                             android:textSize="18sp" />
 
                         <Button
+                            android:id="@+id/btn_plus"
                             android:layout_width="25dp"
                             android:layout_height="28dp"
                             android:background="@drawable/btnpls" />
@@ -191,7 +194,7 @@
 
 
                 <LinearLayout
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
 
@@ -204,7 +207,8 @@
                         android:textSize="18sp" />
 
                     <LinearLayout
-                        android:layout_width="wrap_content"
+                        android:gravity="center"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="horizontal">
 
@@ -217,6 +221,8 @@
                             android:textSize="14sp" />
 
                         <TextView
+                            android:layout_marginRight="10dp"
+                            android:id="@+id/text_my_balance"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/mlight"
@@ -224,7 +230,22 @@
                             android:textColor="@color/bluePrimary"
                             android:textSize="14sp" />
 
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="end"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:id="@+id/ic_no_money"
+                                android:layout_width="29dp"
+                                android:layout_height="29dp"
+                                android:src="@drawable/icnomoney" />
+                        </LinearLayout>
+
                     </LinearLayout>
+
                 </LinearLayout>
 
                 <View
@@ -255,10 +276,11 @@
                             android:textSize="16sp" />
 
                         <TextView
+                            android:id="@+id/text_total_harga"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/mregular"
-                            android:text="US$ 200"
+                            android:text="US$ 0"
                             android:textColor="@color/greenText"
                             android:textSize="28sp" />
 
