@@ -28,7 +28,7 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
-                android:id="@+id/textView3"
+                android:id="@+id/app_title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="32dp"
@@ -41,7 +41,7 @@
                 app:layout_constraintTop_toTopOf="@+id/view3" />
 
             <TextView
-                android:id="@+id/texView4"
+                android:id="@+id/app_subtitle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
@@ -50,9 +50,9 @@
                 android:textAlignment="center"
                 android:textColor="@android:color/white"
                 android:textSize="18sp"
-                app:layout_constraintEnd_toEndOf="@+id/textView3"
-                app:layout_constraintStart_toStartOf="@+id/textView3"
-                app:layout_constraintTop_toBottomOf="@+id/textView3" />
+                app:layout_constraintEnd_toEndOf="@+id/app_title"
+                app:layout_constraintStart_toStartOf="@+id/app_title"
+                app:layout_constraintTop_toBottomOf="@+id/app_title" />
 
             <LinearLayout
                 android:id="@+id/linearLayout"
@@ -67,7 +67,7 @@
                 android:paddingBottom="30dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/texView4">
+                app:layout_constraintTop_toBottomOf="@+id/app_subtitle">
 
 
                 <LinearLayout
