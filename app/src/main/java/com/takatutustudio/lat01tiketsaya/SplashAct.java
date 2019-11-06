@@ -11,7 +11,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 public class SplashAct extends AppCompatActivity {
-    Animation   appSplash, btnToTop;
+    Animation   appSplash, btmToTop;
     ImageView   appLogo;
     TextView    appSubtitle;
 
@@ -22,7 +22,7 @@ public class SplashAct extends AppCompatActivity {
 
        //Load animation
         appSplash   = AnimationUtils.loadAnimation(this, R.anim.app_splash);
-        btnToTop    = AnimationUtils.loadAnimation(this, R.anim.btn_to_top);
+        btmToTop    = AnimationUtils.loadAnimation(this, R.anim.bottom_to_top);
 
         // load element
         appLogo     = findViewById(R.id.app_logo);
@@ -30,7 +30,7 @@ public class SplashAct extends AppCompatActivity {
 
         //Run animation
         appLogo.startAnimation(appSplash);
-        appSubtitle.startAnimation(btnToTop);
+        appSubtitle.startAnimation(btmToTop);
 
        //setting timer untuk 1 detik
         Handler handler = new Handler();
