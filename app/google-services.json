@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "1018314922965",
+    "firebase_url": "https://lat01tiketsaya-73142.firebaseio.com",
+    "project_id": "lat01tiketsaya-73142",
+    "storage_bucket": "lat01tiketsaya-73142.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1018314922965:android:2d7041bf9abda0aaebbb5c",
+        "android_client_info": {
+          "package_name": "com.takatutustudio.lat01tiketsaya"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1018314922965-qnak64nfgu47rqjj2td5cm870940l8o1.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.takatutustudio.lat01tiketsaya",
+            "certificate_hash": "32600501b62d93837a56fef795bc178a6aad8b3e"
+          }
+        },
+        {
+          "client_id": "1018314922965-eu3iipnv2kkm89ek4adr3sv3u7nj1b08.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDAYy7QLAK5fCtnTHojLNtawneQODkhKFQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1018314922965-eu3iipnv2kkm89ek4adr3sv3u7nj1b08.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
