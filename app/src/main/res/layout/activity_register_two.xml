@@ -91,15 +91,14 @@
                         android:layout_gravity="center">
 
                         <ImageView
-                            android:id="@+id/pic_photo_regis_user"
+                            android:id="@+id/pic_photo_register_user"
                             android:layout_width="100dp"
                             android:layout_height="93dp"
-                            android:layout_gravity="center"
-                            android:src="@drawable/zerkiedit" />
+                            android:layout_gravity="center"/>
                     </com.github.florent37.shapeofview.shapes.CircleView>
 
                     <Button
-                        android:id="@+id/btn_plus_blue"
+                        android:id="@+id/btn_add_photo"
                         android:layout_width="38dp"
                         android:layout_height="38dp"
                         android:layout_gravity="end|bottom"
@@ -129,6 +128,7 @@
                         android:textSize="20sp" />
 
                     <EditText
+                        android:id="@+id/nama_lengkap"
                         android:layout_width="match_parent"
                         android:layout_height="50dp"
                         android:background="@drawable/bg_input_edit"
@@ -157,6 +157,7 @@
                         android:textSize="20sp" />
 
                     <EditText
+                        android:id="@+id/bio"
                         android:layout_width="match_parent"
                         android:layout_height="50dp"
                         android:background="@drawable/bg_input_edit"
