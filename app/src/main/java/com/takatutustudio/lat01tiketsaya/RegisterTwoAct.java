@@ -68,6 +68,9 @@ public class RegisterTwoAct extends AppCompatActivity {
         btnContinue.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                //ubah state menjadi loading
+                btnContinue.setEnabled(false);
+                btnContinue.setText("Loading...");
                 //menyimpan kepada firebase
                 reference = FirebaseDatabase.getInstance().getReference()
                         .child("Users")
