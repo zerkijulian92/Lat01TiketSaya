@@ -75,7 +75,6 @@
                     android:layout_width="42dp"
                     android:layout_height="42dp"
                     android:layout_gravity="center"
-                    android:src="@drawable/zerkiedit"
                     app:layout_constraintBottom_toBottomOf="@+id/view4"
                     app:layout_constraintEnd_toEndOf="@+id/view4"
                     app:layout_constraintStart_toStartOf="@+id/view4"
@@ -95,29 +94,31 @@
                 app:layout_constraintTop_toBottomOf="@+id/app_title">
 
                 <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/mmedium"
-                    android:text="Zerky Yulyandri"
-                    android:textColor="@android:color/white"
-                    android:textSize="18sp" />
-
+                android:id="@+id/username"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/mmedium"
+                tools:text="@string/zerky_yulyandri"
+                android:textColor="@android:color/white"
+                android:textSize="18sp" />
                 <TextView
+                    android:id="@+id/bio"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/mlight"
-                    android:text="@string/traveller"
+                    tools:text="Traveller"
                     android:textColor="@android:color/white"
                     android:textSize="14sp" />
             </LinearLayout>
 
             <TextView
+                android:id="@+id/user_balance"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="32dp"
                 android:layout_marginEnd="24dp"
                 android:fontFamily="@font/mlight"
-                android:text="US$ 329"
+                tools:text="$ 800"
                 android:textColor="@color/greenText"
                 android:textSize="22sp"
                 android:textStyle="bold"

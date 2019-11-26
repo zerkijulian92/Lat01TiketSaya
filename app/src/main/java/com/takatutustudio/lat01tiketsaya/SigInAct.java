@@ -25,7 +25,7 @@ public class SigInAct extends AppCompatActivity {
 
     DatabaseReference reference;
 
-    String USERNAME_KEY = "usernameky";
+    String USERNAME_KEY = "usernamekey";
     String username_key = "";
 
     @Override
@@ -46,11 +46,14 @@ public class SigInAct extends AppCompatActivity {
                 startActivity(gotoregisterone);
             }
         });
-
         //Goto HomeAct
         btnSignIn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
+                //ubah state menjadi loading
+                btnSignIn.setEnabled(false);
+                btnSignIn.setText("Loading...");
 
                 final String username = xuserName.getText().toString();
                 final String password = xpassWord.getText().toString();

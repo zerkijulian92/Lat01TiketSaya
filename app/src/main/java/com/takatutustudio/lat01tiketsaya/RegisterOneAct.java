@@ -44,6 +44,10 @@ public class RegisterOneAct extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
+                //ubah state menjadi loading
+                btnContinue.setEnabled(false);
+                btnContinue.setText("Loading...");
+
                 //Menyimpan data kepada local Storage ( Handphone )
                 SharedPreferences sharedPreferences = getSharedPreferences(USERNAME_KEY, MODE_PRIVATE);
                 SharedPreferences.Editor editor = sharedPreferences.edit();
