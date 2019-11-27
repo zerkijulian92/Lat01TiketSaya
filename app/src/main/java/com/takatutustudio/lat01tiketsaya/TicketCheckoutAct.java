@@ -8,11 +8,13 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
 public class TicketCheckoutAct extends AppCompatActivity {
     Button btnBuyTicket, btnMinus, btnPlus;
+    LinearLayout btnBack;
     TextView textJmlTiket, textMyBalance, textTotalHarga;
     ImageView icNoMoney;
     Integer myBalance = 200;
@@ -33,6 +35,7 @@ public class TicketCheckoutAct extends AppCompatActivity {
         textMyBalance   = findViewById(R.id.text_my_balance);
         textTotalHarga  = findViewById(R.id.text_total_harga);
         icNoMoney       = findViewById(R.id.ic_no_money);
+        btnBack         = findViewById(R.id.btn_back);
 
        //Setting Value baru untuk beberapa komponen
         textJmlTiket.setText(valueJumlahTiket.toString());
@@ -101,6 +104,14 @@ public class TicketCheckoutAct extends AppCompatActivity {
             public void onClick(View view) {
                 Intent gotosuccesbuyticket = new Intent(TicketCheckoutAct.this, SuccesBuyTicketAct.class);
                 startActivity(gotosuccesbuyticket);
+            }
+        });
+
+        //btn Back
+        btnBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                onBackPressed();
             }
         });
     }

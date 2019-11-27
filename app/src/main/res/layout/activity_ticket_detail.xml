@@ -19,42 +19,42 @@
             android:paddingBottom="35dp">
 
             <ImageView
-                android:id="@+id/imageView5"
+                android:id="@+id/header_ticket_detail"
                 android:layout_width="match_parent"
                 android:layout_height="210dp"
                 android:scaleType="centerCrop"
-                android:src="@drawable/bgheader_pisa"
+                tools:src="@color/colorPrimary"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="1.0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
-                android:id="@+id/app_title"
+                android:id="@+id/title_ticket"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="32dp"
                 android:fontFamily="@font/mregular"
-                android:text="@string/menara_pisa"
+                tools:text="@string/menara_pisa"
                 android:textColor="@android:color/white"
                 android:textSize="22sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="@+id/imageView5" />
+                app:layout_constraintTop_toTopOf="@+id/header_ticket_detail" />
 
             <TextView
-                android:id="@+id/app_subtitle"
+                android:id="@+id/location_ticket"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
                 android:fontFamily="@font/mlight"
-                android:text="Pisa City, italy"
+                tools:text="Pisa City, italy"
                 android:textAlignment="center"
                 android:textColor="@android:color/white"
                 android:textSize="18sp"
-                app:layout_constraintEnd_toEndOf="@+id/app_title"
-                app:layout_constraintStart_toStartOf="@+id/app_title"
-                app:layout_constraintTop_toBottomOf="@+id/app_title" />
+                app:layout_constraintEnd_toEndOf="@+id/title_ticket"
+                app:layout_constraintStart_toStartOf="@+id/title_ticket"
+                app:layout_constraintTop_toBottomOf="@+id/title_ticket" />
 
             <LinearLayout
                 android:id="@+id/linearLayout"
@@ -71,7 +71,7 @@
                 android:paddingBottom="24dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/app_subtitle">
+                app:layout_constraintTop_toBottomOf="@+id/location_ticket">
 
 
                 <LinearLayout
@@ -83,7 +83,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/mmedium"
-                        android:text="@string/information"
+                        tools:text="@string/information"
                         android:textColor="@android:color/black"
                         android:textSize="18sp" />
 
@@ -91,7 +91,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/mlight"
-                        android:text="Knowing before travel"
+                        tools:text="Knowing before travel"
                         android:textSize="14sp" />
                 </LinearLayout>
 
@@ -125,7 +125,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/mregular"
-                            android:text="4 Photo Spots"
+                            tools:text="4 Photo Spots"
                             android:textColor="@android:color/black"
                             android:textSize="16sp" />
 
@@ -161,9 +161,9 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/mregular"
-                            android:text="@string/wifi_available"
                             android:textColor="@android:color/black"
-                            android:textSize="16sp" />
+                            android:textSize="16sp"
+                            tools:text="@string/wifi_available" />
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -222,7 +222,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/mregular"
-                        android:text="@string/desc_ticket_detail"
+                        tools:text="@string/desc_ticket_detail"
                         android:textSize="16sp" />
 
                 </LinearLayout>

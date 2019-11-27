@@ -20,7 +20,7 @@ import com.google.firebase.database.ValueEventListener;
 import com.squareup.picasso.Picasso;
 
 public class HomeAct extends AppCompatActivity {
-    LinearLayout btnTicketPisa;
+    LinearLayout btnTicketPisa, btnTicketTorri, btnTicketPagoda, btnTicketCandi,btnTicketSphinx, btnTicketMonas;
     CircleView btnToProfile;
     ImageView photoHomeUser;
     TextView userName, bio, userBalance;
@@ -44,6 +44,11 @@ public class HomeAct extends AppCompatActivity {
         bio             = findViewById(R.id.bio);
         userBalance     = findViewById(R.id.user_balance);
         btnTicketPisa   = findViewById(R.id.btn_ticket_pisa);
+        btnTicketTorri  = findViewById(R.id.btn_ticket_torri);
+        btnTicketPagoda = findViewById(R.id.btn_ticket_pagoda);
+        btnTicketCandi  = findViewById(R.id.btn_ticket_candi);
+        btnTicketSphinx = findViewById(R.id.btn_ticket_sphinx);
+        btnTicketMonas  = findViewById(R.id.btn_ticket_monas);
         btnToProfile    = findViewById(R.id.btn_to_profile);
 
         reference = FirebaseDatabase.getInstance().getReference()
@@ -66,12 +71,64 @@ public class HomeAct extends AppCompatActivity {
             }
         });
 
-        //goto Ticket Detail
+        //goto Ticket Detail ( Ticket Pisa )
         btnTicketPisa.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent gotopisaticket = new Intent(HomeAct.this, TicketDetailAct.class);
+                //meletakan data ke intent
+                gotopisaticket.putExtra("jenis_tiket", "Pisa");
                 startActivity(gotopisaticket);
+            }
+        });
+
+        //goto Ticket Detail ( Ticket Torri )
+        btnTicketTorri.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent gototorriticket = new Intent(HomeAct.this, TicketDetailAct.class);
+                gototorriticket.putExtra("jenis_tiket", "Torri");
+                startActivity(gototorriticket);
+            }
+        });
+
+        //goto Ticket Detail ( Ticket Pagoda )
+        btnTicketPagoda.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent gotopagodaticket = new Intent(HomeAct.this, TicketDetailAct.class);
+                gotopagodaticket.putExtra("jenis_tiket", "Pagoda");
+                startActivity(gotopagodaticket);
+            }
+        });
+
+        //goto Ticket Detail ( Ticket Candi )
+        btnTicketCandi.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent gotocanditicket = new Intent(HomeAct.this, TicketDetailAct.class);
+                gotocanditicket.putExtra("jenis_tiket", "Candi");
+                startActivity(gotocanditicket);
+            }
+        });
+
+        //goto Ticket Detail ( Ticket Sphinx )
+        btnTicketSphinx.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent gotosphinxticket = new Intent(HomeAct.this, TicketDetailAct.class);
+                gotosphinxticket.putExtra("jenis_tiket", "Sphinx");
+                startActivity(gotosphinxticket);
+            }
+        });
+
+        //goto Ticket Detail ( Ticket Monas )
+        btnTicketMonas.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent gotomonasticket =  new Intent(HomeAct.this, TicketDetailAct.class);
+                gotomonasticket.putExtra("jenis_tiket", "Monas");
+                startActivity(gotomonasticket);
             }
         });
 

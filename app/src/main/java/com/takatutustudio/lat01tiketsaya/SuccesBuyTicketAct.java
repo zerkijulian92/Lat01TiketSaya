@@ -22,8 +22,8 @@ public class SuccesBuyTicketAct extends AppCompatActivity {
 
         //Registrasi element
         iconSucces      = findViewById(R.id.icon_succes);
-        appTitle        = findViewById(R.id.app_title);
-        appSubtitle     = findViewById(R.id.app_subtitle);
+        appTitle        = findViewById(R.id.title_ticket);
+        appSubtitle     = findViewById(R.id.location_ticket);
         btnEditProfile  = findViewById(R.id.btn_edit_profile);
         btnMyDashboard  = findViewById(R.id.btn_my_dashboard);
 
