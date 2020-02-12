@@ -108,19 +108,20 @@
                         android:orientation="vertical">
 
                         <TextView
-                            android:id="@+id/festival_ticket"
+                            android:id="@+id/nama_wisata"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/mregular"
-                            android:text="@string/menara_pisa"
+                            tools:text="@string/menara_pisa"
                             android:textColor="@android:color/black"
                             android:textSize="16sp" />
 
                         <TextView
+                            android:id="@+id/lokasi"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/mregular"
-                            android:text="@string/pisa_city_italy"
+                            tools:text="@string/pisa_city_italy"
                             android:textSize="14sp" />
                     </LinearLayout>
 
@@ -164,12 +165,12 @@
                     android:orientation="horizontal">
 
                     <TextView
-                        android:id="@+id/short_desc_ticket"
+                        android:id="@+id/ketentuan"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/mregular"
                         android:lineSpacingExtra="8dp"
-                        android:text="@string/desc_buy_ticket_detail"
+                        tools:text="@string/desc_buy_ticket_detail"
                         android:textSize="16sp" />
 
                 </LinearLayout>
@@ -226,7 +227,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/mlight"
-                            android:text="US$ 320"
+                            android:text="$ 0"
                             android:textColor="@color/bluePrimary"
                             android:textSize="14sp" />
 
