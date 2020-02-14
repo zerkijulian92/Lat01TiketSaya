@@ -27,7 +27,7 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
-                android:id="@+id/title_ticket"
+                android:id="@+id/nama_lengkap"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="32dp"
@@ -40,7 +40,7 @@
                 app:layout_constraintTop_toTopOf="@+id/view3" />
 
             <TextView
-                android:id="@+id/location_ticket"
+                android:id="@+id/bio"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
@@ -49,9 +49,9 @@
                 android:textAlignment="center"
                 android:textColor="@android:color/white"
                 android:textSize="18sp"
-                app:layout_constraintEnd_toEndOf="@+id/title_ticket"
-                app:layout_constraintStart_toStartOf="@+id/title_ticket"
-                app:layout_constraintTop_toBottomOf="@+id/title_ticket" />
+                app:layout_constraintEnd_toEndOf="@+id/nama_lengkap"
+                app:layout_constraintStart_toStartOf="@+id/nama_lengkap"
+                app:layout_constraintTop_toBottomOf="@+id/nama_lengkap" />
             <LinearLayout
                 android:id="@+id/linearLayout"
                 android:layout_width="match_parent"
@@ -65,7 +65,7 @@
                 android:paddingBottom="30dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/location_ticket">
+                app:layout_constraintTop_toBottomOf="@+id/bio">
 
                 <FrameLayout
                     android:layout_width="wrap_content"
@@ -89,7 +89,7 @@
                         android:layout_gravity="center">
 
                         <ImageView
-                            android:id="@+id/pic_photo_regis_user"
+                            android:id="@+id/photo_profile"
                             android:layout_width="100dp"
                             android:layout_height="93dp"
                             android:layout_gravity="center"

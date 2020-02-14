@@ -29,7 +29,7 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
-                android:id="@+id/title_ticket"
+                android:id="@+id/nama_lengkap"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="34dp"
@@ -42,7 +42,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/icon_succes" />
 
             <TextView
-                android:id="@+id/location_ticket"
+                android:id="@+id/bio"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
@@ -50,9 +50,9 @@
                 android:text="@string/desc_kamu_hebat"
                 android:textAlignment="center"
                 android:textSize="18sp"
-                app:layout_constraintEnd_toEndOf="@+id/title_ticket"
-                app:layout_constraintStart_toStartOf="@+id/title_ticket"
-                app:layout_constraintTop_toBottomOf="@+id/title_ticket" />
+                app:layout_constraintEnd_toEndOf="@+id/nama_lengkap"
+                app:layout_constraintStart_toStartOf="@+id/nama_lengkap"
+                app:layout_constraintTop_toBottomOf="@+id/nama_lengkap" />
 
             <Button
                 android:id="@+id/btn_explore"
@@ -68,7 +68,7 @@
                 android:textSize="20sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/location_ticket" />
+                app:layout_constraintTop_toBottomOf="@+id/bio" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
