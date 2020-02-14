@@ -15,6 +15,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnSuccessListener;
@@ -71,52 +72,66 @@ public class RegisterTwoAct extends AppCompatActivity {
                 //ubah state menjadi loading
                 btnContinue.setEnabled(false);
                 btnContinue.setText("Loading...");
-                //menyimpan kepada firebase
-                reference = FirebaseDatabase.getInstance().getReference()
-                        .child("Users")
-                        .child(username_key_new);
 
-                //menyimpan kepada firebase Storage
-                storage = FirebaseStorage.getInstance().getReference()
-                        .child("PhotoUsers")
-                        .child(username_key_new);
+                final String name = namaLengkap.getText().toString();
+                final String bIO  = bio.getText().toString();
 
-                //validasi untuk file (apakah ada?)
-               if (photoLocation !=null) {
-                   final StorageReference storageReference1 = storage.child(System.currentTimeMillis() + "." + getFileExtension(photoLocation));
+                if (name.isEmpty()) {
+                    Toast.makeText(getApplicationContext(), "Name kosong!", Toast.LENGTH_SHORT).show();
+                    //ubah state menjadi loading
+                    btnContinue.setEnabled(true);
+                    btnContinue.setText("CONTINUE");
+                }
+                else {
+                    if (bIO.isEmpty()) {
+                        Toast.makeText(getApplicationContext(), "Bio kosong!", Toast.LENGTH_SHORT).show();
+                        //ubah state menjadi loading
+                        btnContinue.setEnabled(true);
+                        btnContinue.setText("CONTINUE");
+                    }
+                    else {
 
-                   //Update String Uri Photo Profile
-                   storageReference1.putFile(photoLocation).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
-                       @Override
-                       public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
+                        //menyimpan kepada firebase
+                        reference = FirebaseDatabase.getInstance().getReference()
+                                .child("Users")
+                                .child(username_key_new);
 
-                           storageReference1.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
-                               @Override
-                               public void onSuccess(Uri uri) {
-                                   String uri_photo = uri.toString();
-                                   reference.getRef().child("url_photo_profile").setValue(uri_photo);
-                                   reference.getRef().child("nama_lengkap").setValue(namaLengkap.getText().toString());
-                                   reference.getRef().child("bio").setValue(bio.getText().toString());
+                        //menyimpan kepada firebase Storage
+                        storage = FirebaseStorage.getInstance().getReference()
+                                .child("PhotoUsers")
+                                .child(username_key_new);
 
-                               }
-                           }).addOnCompleteListener(new OnCompleteListener<Uri>() {
-                               @Override
-                               public void onComplete(@NonNull Task<Uri> task) {
-                                   //berpindah activity
-                                   Intent gotosuccesregister = new Intent(RegisterTwoAct.this, SuccesRegisterAct.class);
-                                   startActivity(gotosuccesregister);
-                               }
-                           });
-                       }
-                   }).addOnCompleteListener(new OnCompleteListener<UploadTask.TaskSnapshot>() {
-                       @Override
-                       public void onComplete(@NonNull Task<UploadTask.TaskSnapshot> task) {
-//                           //berpindah activity
-//                           Intent gotosuccesregister = new Intent(RegisterTwoAct.this, SuccesRegisterAct.class);
-//                           startActivity(gotosuccesregister);
-                       }
-                   });
-               }
+                        //validasi untuk file (apakah ada?)
+                        if (photoLocation !=null) {
+                            final StorageReference storageReference1 = storage.child(System.currentTimeMillis() + "." + getFileExtension(photoLocation));
+
+                            //Update String Uri Photo Profile
+                            storageReference1.putFile(photoLocation).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
+                                @Override
+                                public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
+
+                                    storageReference1.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
+                                        @Override
+                                        public void onSuccess(Uri uri) {
+                                            String uri_photo = uri.toString();
+                                            reference.getRef().child("url_photo_profile").setValue(uri_photo);
+                                            reference.getRef().child("nama_lengkap").setValue(namaLengkap.getText().toString());
+                                            reference.getRef().child("bio").setValue(bio.getText().toString());
+
+                                        }
+                                    }).addOnCompleteListener(new OnCompleteListener<Uri>() {
+                                        @Override
+                                        public void onComplete(@NonNull Task<Uri> task) {
+                                            //berpindah activity
+                                            Intent gotosuccesregister = new Intent(RegisterTwoAct.this, SuccesRegisterAct.class);
+                                            startActivity(gotosuccesregister);
+                                        }
+                                    });
+                                }
+                            });
+                        }
+                    }
+                }
             }
         });
 
@@ -127,7 +142,6 @@ public class RegisterTwoAct extends AppCompatActivity {
                 findPhoto(); //memanggil fungsi findPhoto
             }
         });
-
     }
 
     // Mendapatkan alamat file
