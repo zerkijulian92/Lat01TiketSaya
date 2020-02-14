@@ -54,7 +54,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/title_ticket" />
 
             <Button
-                android:id="@+id/btn_edit_profile"
+                android:id="@+id/btn_view_ticket"
                 android:layout_width="match_parent"
                 android:layout_height="55dp"
                 android:layout_marginStart="48dp"
@@ -83,7 +83,7 @@
                 android:textSize="20sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/btn_edit_profile" />
+                app:layout_constraintTop_toBottomOf="@+id/btn_view_ticket" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

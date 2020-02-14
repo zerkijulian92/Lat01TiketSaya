@@ -31,8 +31,9 @@ public class TicketCheckoutAct extends AppCompatActivity {
     Integer valueJumlahTiket = 1;
     Integer valuetotalHarga = 0;
     Integer valuehargaTiket = 0;
+    Integer sisaBalance = 0;
 
-    DatabaseReference reference, reference2, reference3;
+    DatabaseReference reference, reference2, reference3, reference4;
 
     String USERNAME_KEY     = "usernamekey";
     String username_key     = "";
@@ -178,6 +179,7 @@ public class TicketCheckoutAct extends AppCompatActivity {
                 reference3.addListenerForSingleValueEvent(new ValueEventListener() {
                     @Override
                     public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                        reference3.getRef().child("id_ticket").setValue(textNamaWisata.getText().toString() + nomorTransaksi);
                         reference3.getRef().child("nama_wisata").setValue(textNamaWisata.getText().toString());
                         reference3.getRef().child("lokasi").setValue(textLokasi.getText().toString());
                         reference3.getRef().child("ketentuan").setValue(textKetentuan.getText().toString());
@@ -187,6 +189,23 @@ public class TicketCheckoutAct extends AppCompatActivity {
 
                         Intent gotosuccesbuyticket = new Intent(TicketCheckoutAct.this, SuccesBuyTicketAct.class);
                         startActivity(gotosuccesbuyticket);
+
+                    }
+
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError databaseError) {
+
+                    }
+                });
+
+                // Update data balance kepada Users ( yang saat ini login)
+                // Mengambil data user dari firebase
+                reference4 = FirebaseDatabase.getInstance().getReference().child("Users").child(username_key_new);
+                reference4.addListenerForSingleValueEvent(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                        sisaBalance = myBalance - valuetotalHarga;
+                        reference4.getRef().child("user_balance").setValue(sisaBalance);
 
                     }
 

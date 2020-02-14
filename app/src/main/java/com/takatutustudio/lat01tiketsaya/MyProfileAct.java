@@ -2,7 +2,6 @@ package com.takatutustudio.lat01tiketsaya;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.ClipData;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -11,7 +10,7 @@ import android.widget.LinearLayout;
 
 public class MyProfileAct extends AppCompatActivity {
     LinearLayout ItemMyTicket;
-    Button btnEditProfile;
+    Button btnEditProfile, btnSignOut;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,7 +18,8 @@ public class MyProfileAct extends AppCompatActivity {
         setContentView(R.layout.activity_my_profile);
 
         ItemMyTicket    = findViewById(R.id.item_my_ticket);
-        btnEditProfile  = findViewById(R.id.btn_edit_profile);
+        btnEditProfile  = findViewById(R.id.btn_view_ticket);
+        btnSignOut      = findViewById(R.id.btn_sign_out);
 
         //Goto My Ticket Detail
         ItemMyTicket.setOnClickListener(new View.OnClickListener() {
@@ -36,6 +36,14 @@ public class MyProfileAct extends AppCompatActivity {
             public void onClick(View view) {
                 Intent gotoeditprofile = new Intent(MyProfileAct.this, EditProfileAct.class);
                 startActivity(gotoeditprofile);
+            }
+        });
+
+        //Goto Sign Out
+        btnSignOut.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
             }
         });
     }

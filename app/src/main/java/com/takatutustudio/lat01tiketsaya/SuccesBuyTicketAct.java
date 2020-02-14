@@ -2,7 +2,9 @@ package com.takatutustudio.lat01tiketsaya;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.Button;
@@ -13,7 +15,7 @@ public class SuccesBuyTicketAct extends AppCompatActivity {
     Animation appSplash, bottomToTop, topToBottom;
     ImageView iconSucces;
     TextView appTitle, appSubtitle;
-    Button btnEditProfile, btnMyDashboard;
+    Button btnEditProfile, btnMyDashboard, btnViewTicket;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,8 +26,9 @@ public class SuccesBuyTicketAct extends AppCompatActivity {
         iconSucces      = findViewById(R.id.icon_succes);
         appTitle        = findViewById(R.id.title_ticket);
         appSubtitle     = findViewById(R.id.location_ticket);
-        btnEditProfile  = findViewById(R.id.btn_edit_profile);
+        btnEditProfile  = findViewById(R.id.btn_view_ticket);
         btnMyDashboard  = findViewById(R.id.btn_my_dashboard);
+        btnViewTicket   = findViewById(R.id.btn_view_ticket);
 
         //Regitrasi Animasi
         appSplash       = AnimationUtils.loadAnimation(this, R.anim.app_splash);
@@ -38,5 +41,23 @@ public class SuccesBuyTicketAct extends AppCompatActivity {
         appSubtitle.startAnimation(topToBottom);
         btnEditProfile.startAnimation(bottomToTop);
         btnMyDashboard.startAnimation(bottomToTop);
+
+        // Goto MyDasboard
+        btnMyDashboard.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent gotomydashboard = new Intent(SuccesBuyTicketAct.this, HomeAct.class);
+                startActivity(gotomydashboard);
+            }
+        });
+
+        // Goto ViewTickets
+        btnViewTicket.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent gotoviewticket = new Intent(SuccesBuyTicketAct.this, MyProfileAct.class);
+                startActivity(gotoviewticket);
+            }
+        });
     }
 }
