@@ -37,7 +37,7 @@ public class TicketDetailAct extends AppCompatActivity {
         locationTicket      = findViewById(R.id.bio);
         photoSpotTicket     = findViewById(R.id.photo_spot_ticket);
         wifiTicket          = findViewById(R.id.wifi_ticket);
-        festivalTicket      = findViewById(R.id.festival_ticket);
+        festivalTicket      = findViewById(R.id.xnama_wisata);
         shortDescTicket     = findViewById(R.id.short_desc_ticket);
         btnBuyTicket        = findViewById(R.id.btn_buy_ticket);
         btnBack             = findViewById(R.id.btn_back);

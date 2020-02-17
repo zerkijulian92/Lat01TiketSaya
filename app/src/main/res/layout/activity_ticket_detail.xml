@@ -193,7 +193,7 @@
                         android:orientation="vertical">
 
                         <TextView
-                            android:id="@+id/festival_ticket"
+                            android:id="@+id/xnama_wisata"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/mregular"
