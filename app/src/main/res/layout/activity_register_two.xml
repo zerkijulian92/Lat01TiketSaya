@@ -29,7 +29,7 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
-                android:id="@+id/nama_lengkap"
+                android:id="@+id/xname_lengkap"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="32dp"
@@ -51,9 +51,9 @@
                 android:textAlignment="center"
                 android:textColor="@android:color/white"
                 android:textSize="18sp"
-                app:layout_constraintEnd_toEndOf="@+id/nama_lengkap"
-                app:layout_constraintStart_toStartOf="@+id/nama_lengkap"
-                app:layout_constraintTop_toBottomOf="@+id/nama_lengkap" />
+                app:layout_constraintEnd_toEndOf="@+id/xname_lengkap"
+                app:layout_constraintStart_toStartOf="@+id/xname_lengkap"
+                app:layout_constraintTop_toBottomOf="@+id/xname_lengkap" />
             <LinearLayout
                 android:id="@+id/linearLayout"
                 android:layout_width="match_parent"
@@ -128,7 +128,7 @@
                         android:textSize="20sp" />
 
                     <EditText
-                        android:id="@+id/nama_lengkap"
+                        android:id="@+id/xname_lengkap"
                         android:layout_width="match_parent"
                         android:layout_height="50dp"
                         android:background="@drawable/bg_input_edit"
@@ -157,7 +157,7 @@
                         android:textSize="20sp" />
 
                     <EditText
-                        android:id="@+id/bio"
+                        android:id="@+id/xbio"
                         android:layout_width="match_parent"
                         android:layout_height="50dp"
                         android:background="@drawable/bg_input_edit"

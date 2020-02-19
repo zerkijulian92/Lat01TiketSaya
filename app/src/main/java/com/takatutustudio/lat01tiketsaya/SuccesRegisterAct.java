@@ -24,7 +24,7 @@ public class SuccesRegisterAct extends AppCompatActivity {
 
         //Load Element
         iconSucces      = findViewById(R.id.icon_succes);
-        appTitle        = findViewById(R.id.nama_lengkap);
+        appTitle        = findViewById(R.id.xname_lengkap);
         appSubtitle     = findViewById(R.id.bio);
         btnExplore      = findViewById(R.id.btn_explore);
 

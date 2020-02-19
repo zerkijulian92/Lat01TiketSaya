@@ -83,8 +83,8 @@ public class RegisterOneAct extends AppCompatActivity {
                             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                                 dataSnapshot.getRef().child("username").setValue(userName.getText().toString());
                                 dataSnapshot.getRef().child("password").setValue(passWord.getText().toString());
-                                dataSnapshot.getRef().child("email_adddress").setValue(emailAddress.getText().toString());
-                                dataSnapshot.getRef().child("user_balance").setValue(900);
+                                dataSnapshot.getRef().child("email_address").setValue(emailAddress.getText().toString());
+                                dataSnapshot.getRef().child("user_balance").setValue(500);
 
                             }
 

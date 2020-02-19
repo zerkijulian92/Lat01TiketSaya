@@ -29,7 +29,7 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
-                android:id="@+id/nama_lengkap"
+                android:id="@+id/xname_lengkap"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="32dp"
@@ -49,7 +49,7 @@
                 android:layout_marginTop="26dp"
                 android:background="@drawable/bg_view_circle_picture"
                 app:layout_constraintStart_toStartOf="@+id/view3"
-                app:layout_constraintTop_toBottomOf="@+id/nama_lengkap" />
+                app:layout_constraintTop_toBottomOf="@+id/xname_lengkap" />
 
             <ImageView
                 android:layout_width="42dp"
@@ -91,7 +91,7 @@
                 android:layout_marginTop="24dp"
                 android:orientation="vertical"
                 app:layout_constraintStart_toEndOf="@+id/view4"
-                app:layout_constraintTop_toBottomOf="@+id/nama_lengkap">
+                app:layout_constraintTop_toBottomOf="@+id/xname_lengkap">
 
                 <TextView
                 android:id="@+id/username"
@@ -123,7 +123,7 @@
                 android:textSize="22sp"
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="@+id/view3"
-                app:layout_constraintTop_toBottomOf="@+id/nama_lengkap" />
+                app:layout_constraintTop_toBottomOf="@+id/xname_lengkap" />
 
 
             <LinearLayout
@@ -141,7 +141,7 @@
                 android:paddingBottom="24dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/nama_lengkap">
+                app:layout_constraintTop_toBottomOf="@+id/xname_lengkap">
 
 
                 <LinearLayout
