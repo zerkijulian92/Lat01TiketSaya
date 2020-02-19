@@ -27,7 +27,7 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
-                android:id="@+id/xname_lengkap"
+                android:id="@+id/nama_lengkap"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="32dp"
@@ -40,7 +40,7 @@
                 app:layout_constraintTop_toTopOf="@+id/view3" />
 
             <TextView
-                android:id="@+id/bio"
+                android:id="@+id/please_fill"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
@@ -49,9 +49,9 @@
                 android:textAlignment="center"
                 android:textColor="@android:color/white"
                 android:textSize="18sp"
-                app:layout_constraintEnd_toEndOf="@+id/xname_lengkap"
-                app:layout_constraintStart_toStartOf="@+id/xname_lengkap"
-                app:layout_constraintTop_toBottomOf="@+id/xname_lengkap" />
+                app:layout_constraintEnd_toEndOf="@+id/nama_lengkap"
+                app:layout_constraintStart_toStartOf="@+id/nama_lengkap"
+                app:layout_constraintTop_toBottomOf="@+id/nama_lengkap" />
             <LinearLayout
                 android:id="@+id/linearLayout"
                 android:layout_width="match_parent"
@@ -65,7 +65,7 @@
                 android:paddingBottom="30dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/bio">
+                app:layout_constraintTop_toBottomOf="@+id/please_fill">
 
                 <FrameLayout
                     android:layout_width="wrap_content"
@@ -127,7 +127,7 @@
                         android:textSize="20sp" />
 
                     <EditText
-                        android:id="@+id/xnama_lengkap"
+                        android:id="@+id/edtnama_lengkap"
                         android:layout_width="match_parent"
                         android:layout_height="50dp"
                         android:background="@drawable/bg_input_edit"
@@ -157,7 +157,7 @@
                         android:textSize="20sp" />
 
                     <EditText
-                        android:id="@+id/xbio"
+                        android:id="@+id/edtbio"
                         android:layout_width="match_parent"
                         android:layout_height="50dp"
                         android:background="@drawable/bg_input_edit"
@@ -186,7 +186,7 @@
                         android:textSize="20sp" />
 
                     <EditText
-                        android:id="@+id/xusername"
+                        android:id="@+id/edtusername"
                         android:layout_width="match_parent"
                         android:layout_height="50dp"
                         android:background="@drawable/bg_input_edit"
@@ -215,7 +215,7 @@
                         android:textSize="20sp" />
 
                     <EditText
-                        android:id="@+id/xpassword"
+                        android:id="@+id/edtpassword"
                         android:layout_width="match_parent"
                         android:layout_height="50dp"
                         android:background="@drawable/bg_input_edit"
@@ -244,7 +244,7 @@
                         android:textSize="20sp" />
 
                     <EditText
-                        android:id="@+id/xemail_address"
+                        android:id="@+id/edtemail_address"
                         android:layout_width="match_parent"
                         android:layout_height="50dp"
                         android:background="@drawable/bg_input_edit"

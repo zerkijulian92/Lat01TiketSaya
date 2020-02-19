@@ -33,8 +33,8 @@ public class SigInAct extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_in);
 
-        xuserName            = findViewById(R.id.xusername);
-        xpassWord            = findViewById(R.id.xpassword);
+        xuserName            = findViewById(R.id.edtusername);
+        xpassWord            = findViewById(R.id.edtpassword);
         btnCreateNewAccount = findViewById(R.id.btn_create_new_account);
         btnSignIn           = findViewById(R.id.btn_sign_in);
 

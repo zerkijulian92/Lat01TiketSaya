@@ -41,7 +41,7 @@ public class HomeAct extends AppCompatActivity {
 
         photoHomeUser   = findViewById(R.id.photo_home_user);
         userName        = findViewById(R.id.username);
-        bio             = findViewById(R.id.bio);
+        bio             = findViewById(R.id.please_fill);
         userBalance     = findViewById(R.id.user_balance);
         btnTicketPisa   = findViewById(R.id.btn_ticket_pisa);
         btnTicketTorri  = findViewById(R.id.btn_ticket_torri);

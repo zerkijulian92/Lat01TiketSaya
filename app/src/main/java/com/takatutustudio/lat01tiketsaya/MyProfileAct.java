@@ -48,8 +48,8 @@ public class MyProfileAct extends AppCompatActivity {
         getUsernameLocal();
 
         photoProfile    = findViewById(R.id.photo_edit_profile);
-        namaLengkap     = findViewById(R.id.xname_lengkap);
-        bio             = findViewById(R.id.bio);
+        namaLengkap     = findViewById(R.id.nama_lengkap);
+        bio             = findViewById(R.id.please_fill);
         ItemMyTicket    = findViewById(R.id.item_my_ticket);
         btnEditProfile  = findViewById(R.id.btn_view_ticket);
         btnSignOut      = findViewById(R.id.btn_sign_out);

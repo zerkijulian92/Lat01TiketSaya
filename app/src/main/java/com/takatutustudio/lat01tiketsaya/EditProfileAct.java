@@ -3,6 +3,7 @@ package com.takatutustudio.lat01tiketsaya;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
@@ -20,7 +21,7 @@ import com.squareup.picasso.Picasso;
 
 public class EditProfileAct extends AppCompatActivity {
     ImageView photoEditProfile;
-    EditText xNamaLengkap, xBio, xUsername, xPassword, xEmailAddress;
+    EditText edtNamaLengkap, edtBio, edtUsername, edtPassword, edtEmailAddress;
     Button btnSaveProfile;
     LinearLayout btnBack;
 
@@ -36,11 +37,11 @@ public class EditProfileAct extends AppCompatActivity {
         setContentView(R.layout.activity_edit_profile);
         // Deklarasi ID
         photoEditProfile = findViewById(R.id.photo_edit_profile);
-        xNamaLengkap     = findViewById(R.id.xname_lengkap);
-        xBio             = findViewById(R.id.xbio);
-        xUsername        = findViewById(R.id.xusername);
-        xPassword        = findViewById(R.id.xpassword);
-        xEmailAddress    = findViewById(R.id.xemail_address);
+        edtNamaLengkap     = findViewById(R.id.edtnama_lengkap);
+        edtBio             = findViewById(R.id.edtbio);
+        edtUsername        = findViewById(R.id.edtusername);
+        edtPassword        = findViewById(R.id.edtpassword);
+        edtEmailAddress    = findViewById(R.id.edtemail_address);
         btnSaveProfile   = findViewById(R.id.btn_save_profile);
         btnBack          = findViewById(R.id.btn_back);
 
@@ -53,11 +54,11 @@ public class EditProfileAct extends AppCompatActivity {
         reference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                xNamaLengkap.setText(dataSnapshot.child("Users").getValue().toString());
-                xBio.setText(dataSnapshot.child("bio").getValue().toString());
-                xUsername.setText(dataSnapshot.child("username").getValue().toString());
-                xPassword.setText(dataSnapshot.child("password").getValue().toString());
-                xEmailAddress.setText(dataSnapshot.child("email_address").getValue().toString());
+                edtNamaLengkap.setText(dataSnapshot.child("nama_lengkap").getValue().toString());
+                edtBio.setText(dataSnapshot.child("bio").getValue().toString());
+                edtUsername.setText(dataSnapshot.child("username").getValue().toString());
+                edtPassword.setText(dataSnapshot.child("password").getValue().toString());
+                edtEmailAddress.setText(dataSnapshot.child("email_address").getValue().toString());
                 Picasso.with(EditProfileAct.this)
                         .load(dataSnapshot.child("url_photo_profile")
                         .getValue().toString()).centerCrop().fit()
@@ -78,11 +79,11 @@ public class EditProfileAct extends AppCompatActivity {
                 reference.addListenerForSingleValueEvent(new ValueEventListener() {
                     @Override
                     public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                        dataSnapshot.getRef().child("nama_lengkap").setValue(xNamaLengkap.getText().toString());
-                        dataSnapshot.getRef().child("bio").setValue(xBio.getText().toString());
-                        dataSnapshot.getRef().child("username").setValue(xUsername.getText().toString());
-                        dataSnapshot.getRef().child("password").setValue(xPassword.getText().toString());
-                        dataSnapshot.getRef().child("email_address").setValue(xEmailAddress.getText().toString());
+                        dataSnapshot.getRef().child("nama_lengkap").setValue(edtNamaLengkap.getText().toString());
+                        dataSnapshot.getRef().child("bio").setValue(edtBio.getText().toString());
+                        dataSnapshot.getRef().child("username").setValue(edtUsername.getText().toString());
+                        dataSnapshot.getRef().child("password").setValue(edtPassword.getText().toString());
+                        dataSnapshot.getRef().child("email_address").setValue(edtEmailAddress.getText().toString());
                     }
 
                     @Override
@@ -90,6 +91,9 @@ public class EditProfileAct extends AppCompatActivity {
 
                     }
                 });
+                // Berpindah activity
+                Intent gotobackprofile = new Intent(EditProfileAct.this, MyProfileAct.class);
+                startActivity(gotobackprofile);
             }
         });
     }

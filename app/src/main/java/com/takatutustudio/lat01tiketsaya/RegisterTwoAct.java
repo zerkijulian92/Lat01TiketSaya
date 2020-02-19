@@ -31,7 +31,7 @@ public class RegisterTwoAct extends AppCompatActivity {
     LinearLayout btnBack;
     Button btnContinue, btnAddPhoto;
     ImageView picPhotoRegisterUser;
-    EditText xNameLengkap, bio;
+    EditText NameLengkap, bio;
 
     Uri photoLocation;
     Integer photoMax = 1;
@@ -54,8 +54,8 @@ public class RegisterTwoAct extends AppCompatActivity {
         btnContinue             = findViewById(R.id.btn_continue);
         btnAddPhoto             = findViewById(R.id.btn_add_photo);
         picPhotoRegisterUser    = findViewById(R.id.pic_photo_register_user);
-        xNameLengkap            = findViewById(R.id.xname_lengkap);
-        bio                     = findViewById(R.id.xbio);
+        NameLengkap            = findViewById(R.id.nama_lengkap);
+        bio                     = findViewById(R.id.edtbio);
 
         //Fungsi btnBack
         btnBack.setOnClickListener(new View.OnClickListener() {
@@ -73,7 +73,7 @@ public class RegisterTwoAct extends AppCompatActivity {
                 btnContinue.setEnabled(false);
                 btnContinue.setText("Loading...");
 
-                final String name = xNameLengkap.getText().toString();
+                final String name = NameLengkap.getText().toString();
                 final String bIO  = bio.getText().toString();
 
                 if (name.isEmpty()) {
@@ -115,7 +115,7 @@ public class RegisterTwoAct extends AppCompatActivity {
                                         public void onSuccess(Uri uri) {
                                             String uri_photo = uri.toString();
                                             reference.getRef().child("url_photo_profile").setValue(uri_photo);
-                                            reference.getRef().child("nama_lengkap").setValue(xNameLengkap.getText().toString());
+                                            reference.getRef().child("nama_lengkap").setValue(NameLengkap.getText().toString());
                                             reference.getRef().child("bio").setValue(bio.getText().toString());
 
                                         }

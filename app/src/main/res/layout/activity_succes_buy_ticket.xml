@@ -28,7 +28,7 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
-                android:id="@+id/xname_lengkap"
+                android:id="@+id/nama_lengkap"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="34dp"
@@ -41,7 +41,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/icon_succes" />
 
             <TextView
-                android:id="@+id/bio"
+                android:id="@+id/please_fill"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
@@ -49,9 +49,9 @@
                 android:text="@string/desc_kamu_hebat"
                 android:textAlignment="center"
                 android:textSize="18sp"
-                app:layout_constraintEnd_toEndOf="@+id/xname_lengkap"
-                app:layout_constraintStart_toStartOf="@+id/xname_lengkap"
-                app:layout_constraintTop_toBottomOf="@+id/xname_lengkap" />
+                app:layout_constraintEnd_toEndOf="@+id/nama_lengkap"
+                app:layout_constraintStart_toStartOf="@+id/nama_lengkap"
+                app:layout_constraintTop_toBottomOf="@+id/nama_lengkap" />
 
             <Button
                 android:id="@+id/btn_view_ticket"
@@ -67,7 +67,7 @@
                 android:textSize="20sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/bio" />
+                app:layout_constraintTop_toBottomOf="@+id/please_fill" />
 
             <Button
                 android:id="@+id/btn_my_dashboard"

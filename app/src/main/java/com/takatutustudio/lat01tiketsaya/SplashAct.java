@@ -26,7 +26,7 @@ public class SplashAct extends AppCompatActivity {
 
         // load element
         appLogo     = findViewById(R.id.app_logo);
-        appSubtitle = findViewById(R.id.bio);
+        appSubtitle = findViewById(R.id.please_fill);
 
         //Run animation
         appLogo.startAnimation(appSplash);

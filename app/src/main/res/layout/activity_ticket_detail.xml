@@ -30,7 +30,7 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
-                android:id="@+id/xname_lengkap"
+                android:id="@+id/nama_lengkap"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="32dp"
@@ -43,7 +43,7 @@
                 app:layout_constraintTop_toTopOf="@+id/header_ticket_detail" />
 
             <TextView
-                android:id="@+id/bio"
+                android:id="@+id/please_fill"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
@@ -52,9 +52,9 @@
                 android:textAlignment="center"
                 android:textColor="@android:color/white"
                 android:textSize="18sp"
-                app:layout_constraintEnd_toEndOf="@+id/xname_lengkap"
-                app:layout_constraintStart_toStartOf="@+id/xname_lengkap"
-                app:layout_constraintTop_toBottomOf="@+id/xname_lengkap" />
+                app:layout_constraintEnd_toEndOf="@+id/nama_lengkap"
+                app:layout_constraintStart_toStartOf="@+id/nama_lengkap"
+                app:layout_constraintTop_toBottomOf="@+id/nama_lengkap" />
 
             <LinearLayout
                 android:id="@+id/linearLayout"
@@ -71,7 +71,7 @@
                 android:paddingBottom="24dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/bio">
+                app:layout_constraintTop_toBottomOf="@+id/please_fill">
 
 
                 <LinearLayout

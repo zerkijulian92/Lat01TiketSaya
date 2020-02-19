@@ -33,8 +33,8 @@ public class TicketDetailAct extends AppCompatActivity {
 
         //Deklarasi ID
         headerTicketDetail  = findViewById(R.id.header_ticket_detail);
-        titleTicket         = findViewById(R.id.xname_lengkap);
-        locationTicket      = findViewById(R.id.bio);
+        titleTicket         = findViewById(R.id.nama_lengkap);
+        locationTicket      = findViewById(R.id.please_fill);
         photoSpotTicket     = findViewById(R.id.photo_spot_ticket);
         wifiTicket          = findViewById(R.id.wifi_ticket);
         festivalTicket      = findViewById(R.id.xnama_wisata);
