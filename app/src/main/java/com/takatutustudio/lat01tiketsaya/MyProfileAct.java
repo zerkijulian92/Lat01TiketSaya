@@ -76,6 +76,15 @@ public class MyProfileAct extends AppCompatActivity {
             }
         });
 
+        //Goto Home
+        photoProfile.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent gotohome = new Intent(MyProfileAct.this, HomeAct.class);
+                startActivity(gotohome);
+            }
+        });
+
         //Goto Edit Profile
         btnEditProfile.setOnClickListener(new View.OnClickListener() {
             @Override
