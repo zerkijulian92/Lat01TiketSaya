@@ -70,7 +70,7 @@
                         android:src="@drawable/ic_ticket_buy" />
 
                     <LinearLayout
-                        android:layout_width="wrap_content"
+                        android:layout_width="140dp"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="12dp"
                         android:layout_marginRight="12dp"
@@ -81,34 +81,17 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/mregular"
-                            android:text="@string/menara_pisa"
                             android:textColor="@android:color/black"
-                            android:textSize="16sp" />
+                            android:textSize="16sp"
+                            tools:text="@string/menara_pisa" />
 
                         <TextView
+                            android:id="@+id/xlokasi"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/mregular"
-                            android:text="@string/pisa_city_italy"
+                            tools:text="@string/pisa_city_italy"
                             android:textSize="14sp" />
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:gravity="right"
-                        android:orientation="horizontal">
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="12dp"
-                            android:layout_marginRight="12dp"
-                            android:fontFamily="@font/mregular"
-                            android:text="3 Tickets"
-                            android:textColor="@color/blueSecondary"
-                            android:textSize="14sp" />
-
                     </LinearLayout>
 
                 </LinearLayout>
@@ -137,10 +120,11 @@
                         android:textSize="18sp" />
 
                     <TextView
+                        android:id="@+id/xdate_wisata"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/mlight"
-                        android:text="January 22, 2018"
+                        tools:text="January 22, 2018"
                         android:textSize="14sp" />
                 </LinearLayout>
                 <LinearLayout
@@ -160,10 +144,11 @@
                         android:textSize="18sp" />
 
                     <TextView
+                        android:id="@+id/xtime_wisata"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/mlight"
-                        android:text="10AM to 12PM"
+                        tools:text="10AM to 12PM"
                         android:textSize="14sp" />
                 </LinearLayout>
                 <LinearLayout
@@ -183,10 +168,11 @@
                         android:textSize="18sp" />
 
                     <TextView
+                        android:id="@+id/xketentuan"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/mlight"
-                        android:text="@string/desc_buy_ticket_detail"
+                        tools:text="@string/desc_buy_ticket_detail"
                         android:textSize="14sp" />
                 </LinearLayout>
 
@@ -224,6 +210,7 @@
                 </LinearLayout>
 
                 <Button
+                    android:id="@+id/btn_refund"
                     android:layout_width="match_parent"
                     android:layout_height="55dp"
                     android:background="@drawable/bg_btn_green"
