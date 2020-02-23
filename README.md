@@ -6,3 +6,8 @@ Dari sana muncullah ide untuk mencoba membuat sebuah aplikasi sederhana pemesana
 dengan menggunakan Adobe XD, Android Studio & Firebase.
 
 Aplikasi ini dibuat untuk tugas project di kelas online android BWA.
+
+# Tools Used
+- Android Studio : https://developer.android.com/studio
+- Adobe XD : https://www.adobe.com/sea/products/xd.html
+- Firebase : https://firebase.google.com/
