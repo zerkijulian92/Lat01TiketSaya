@@ -117,6 +117,15 @@ public class MyProfileAct extends AppCompatActivity {
         btnSignOut.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                // Menghapus isi / nilai / value dari username local
+                SharedPreferences sharedPreferences = getSharedPreferences(USERNAME_KEY, MODE_PRIVATE);
+                SharedPreferences.Editor editor = sharedPreferences.edit();
+                editor.putString(username_key, null);
+                editor.apply();
+
+                // Berpindah Activity
+                Intent gotosignin = new Intent(MyProfileAct.this, SigInAct.class);
+                startActivity(gotosignin);
                 finish();
             }
         });
