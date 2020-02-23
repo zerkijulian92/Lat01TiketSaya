@@ -11,3 +11,7 @@ Aplikasi ini dibuat untuk tugas project di kelas online android BWA.
 - Android Studio : https://developer.android.com/studio
 - Adobe XD : https://www.adobe.com/sea/products/xd.html
 - Firebase : https://firebase.google.com/
+
+# ScreenShoot
+![tiketsaya - dribbble](https://user-images.githubusercontent.com/50509675/75112158-93419d00-5673-11ea-8adf-d19ff670a307.png)
+
