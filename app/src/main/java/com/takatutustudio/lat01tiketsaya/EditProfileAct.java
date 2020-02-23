@@ -156,6 +156,10 @@ public class EditProfileAct extends AppCompatActivity {
 
                             }
                         });
+                        // Berpindah activity ketika data di EditText sudah terisi
+                        Intent gotobackprofile = new Intent(EditProfileAct.this, MyProfileAct.class);
+                        startActivity(gotobackprofile);
+
                         // Validasi untuk file (apakah ada?)
                         if (photoLocation != null){
                             final StorageReference storageReference1 =
@@ -177,10 +181,9 @@ public class EditProfileAct extends AppCompatActivity {
                                             }).addOnCompleteListener(new OnCompleteListener<Uri>() {
                                                 @Override
                                                 public void onComplete(@NonNull Task<Uri> task) {
-                                                    // Berpindah activity
+                                                    // Berpindah activity ketika update photo profile
                                                     Intent gotobackprofile = new Intent(EditProfileAct.this, MyProfileAct.class);
                                                     startActivity(gotobackprofile);
-
                                                 }
                                             });
                                         }
