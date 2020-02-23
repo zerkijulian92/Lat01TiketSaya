@@ -1,32 +1,47 @@
 package com.takatutustudio.lat01tiketsaya;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.ContentResolver;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
+import android.webkit.MimeTypeMap;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
+import com.google.android.gms.auth.api.signin.internal.Storage;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.android.gms.tasks.Task;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+import com.google.firebase.storage.FirebaseStorage;
+import com.google.firebase.storage.StorageReference;
+import com.google.firebase.storage.UploadTask;
 import com.squareup.picasso.Picasso;
 
 public class EditProfileAct extends AppCompatActivity {
     ImageView photoEditProfile;
     EditText edtNamaLengkap, edtBio, edtUsername, edtPassword, edtEmailAddress;
-    Button btnSaveProfile;
+    Button btnSaveProfile, btnAddNewPhoto;
     LinearLayout btnBack;
 
+    Uri photoLocation;
+    Integer photoMax = 1;
+
     DatabaseReference reference;
+    StorageReference storage;
 
     String USERNAME_KEY     = "usernamekey";
     String username_key     = "";
@@ -37,14 +52,15 @@ public class EditProfileAct extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_edit_profile);
         // Deklarasi ID
-        photoEditProfile = findViewById(R.id.photo_edit_profile);
+        photoEditProfile   = findViewById(R.id.photo_edit_profile);
         edtNamaLengkap     = findViewById(R.id.edtnama_lengkap);
         edtBio             = findViewById(R.id.edtbio);
         edtUsername        = findViewById(R.id.edtusername);
         edtPassword        = findViewById(R.id.edtpassword);
         edtEmailAddress    = findViewById(R.id.edtemail_address);
-        btnSaveProfile   = findViewById(R.id.btn_save_profile);
-        btnBack          = findViewById(R.id.btn_back);
+        btnSaveProfile     = findViewById(R.id.btn_save_profile);
+        btnBack            = findViewById(R.id.btn_back);
+        btnAddNewPhoto     = findViewById(R.id.btn_add_new_photo);
 
         // Memanggil Fungsi mendapatkan username secara local
         getUsernameLocal();
@@ -52,6 +68,9 @@ public class EditProfileAct extends AppCompatActivity {
         // Menghubungkan data ke firebase
         // mendapatkan data dari firebase dan memunculkannya di EditText
         reference = FirebaseDatabase.getInstance().getReference().child("Users").child(username_key_new);
+
+        storage = FirebaseStorage.getInstance().getReference().child("PhotoUsers").child(username_key_new);
+
         reference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
@@ -137,33 +156,78 @@ public class EditProfileAct extends AppCompatActivity {
 
                             }
                         });
-                        // Berpindah activity
-                        Intent gotobackprofile = new Intent(EditProfileAct.this, MyProfileAct.class);
-                        startActivity(gotobackprofile);
+                        // Validasi untuk file (apakah ada?)
+                        if (photoLocation != null){
+                            final StorageReference storageReference1 =
+                                    storage.child(System.currentTimeMillis() + "." +
+                                            getFileExtension(photoLocation));
+
+                            //Update String Uri Photo Profile
+                            storageReference1.putFile(photoLocation)
+                                    .addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
+                                        @Override
+                                        public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
+
+                                            storageReference1.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
+                                                @Override
+                                                public void onSuccess(Uri uri) {
+                                                    String uri_photo = uri.toString();
+                                                    reference.getRef().child("url_photo_profile").setValue(uri_photo);
+                                                }
+                                            }).addOnCompleteListener(new OnCompleteListener<Uri>() {
+                                                @Override
+                                                public void onComplete(@NonNull Task<Uri> task) {
+                                                    // Berpindah activity
+                                                    Intent gotobackprofile = new Intent(EditProfileAct.this, MyProfileAct.class);
+                                                    startActivity(gotobackprofile);
+
+                                                }
+                                            });
+                                        }
+                                    });
+                        }
 
                     }
                 }
-
-//                reference.addListenerForSingleValueEvent(new ValueEventListener() {
-//                    @Override
-//                    public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-//                        dataSnapshot.getRef().child("nama_lengkap").setValue(edtNamaLengkap.getText().toString());
-//                        dataSnapshot.getRef().child("bio").setValue(edtBio.getText().toString());
-//                        dataSnapshot.getRef().child("username").setValue(edtUsername.getText().toString());
-//                        dataSnapshot.getRef().child("password").setValue(edtPassword.getText().toString());
-//                        dataSnapshot.getRef().child("email_address").setValue(edtEmailAddress.getText().toString());
-//                    }
-//
-//                    @Override
-//                    public void onCancelled(@NonNull DatabaseError databaseError) {
-//
-//                    }
-//                });
-//                // Berpindah activity
-//                Intent gotobackprofile = new Intent(EditProfileAct.this, MyProfileAct.class);
-//                startActivity(gotobackprofile);
             }
         });
+
+        // Fungsi btnAddNewPhoto
+        btnAddNewPhoto.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                findPhoto();
+            }
+        });
+    }
+
+    // Mendapatkan alamat file
+    String getFileExtension(Uri uri){
+        ContentResolver contentResolver = getContentResolver();
+        MimeTypeMap mimeTypeMap = MimeTypeMap.getSingleton();
+        return mimeTypeMap.getExtensionFromMimeType(contentResolver.getType(uri));
+    }
+
+    // fungsi findPhoto
+    public void findPhoto() {
+        Intent pic = new Intent();
+        pic.setType("image/*");
+        pic.setAction(Intent.ACTION_GET_CONTENT);
+        startActivityForResult(pic, photoMax);
+    }
+
+    //Fungsi Menimban Photo
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+
+        if (requestCode == photoMax && resultCode == RESULT_OK && data != null && data.getData() != null) {
+            photoLocation = data.getData();
+            Picasso.with(this).load(photoLocation)
+                    .centerCrop()
+                    .fit()
+                    .into(photoEditProfile);
+        }
     }
 
     // Fungsi mendapatkan username secara local

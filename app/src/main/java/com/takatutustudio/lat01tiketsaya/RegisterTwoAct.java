@@ -52,7 +52,7 @@ public class RegisterTwoAct extends AppCompatActivity {
 
         btnBack                 = findViewById(R.id.btn_back);
         btnContinue             = findViewById(R.id.btn_continue);
-        btnAddPhoto             = findViewById(R.id.btn_add_photo);
+        btnAddPhoto             = findViewById(R.id.btn_add_new_photo);
         picPhotoRegisterUser    = findViewById(R.id.pic_photo_register_user);
         NameLengkap            = findViewById(R.id.nama_lengkap);
         bio                     = findViewById(R.id.edtbio);
@@ -103,10 +103,13 @@ public class RegisterTwoAct extends AppCompatActivity {
 
                         //validasi untuk file (apakah ada?)
                         if (photoLocation !=null) {
-                            final StorageReference storageReference1 = storage.child(System.currentTimeMillis() + "." + getFileExtension(photoLocation));
+                            final StorageReference storageReference1 =
+                                    storage.child(System.currentTimeMillis() + "."
+                                            + getFileExtension(photoLocation));
 
                             //Update String Uri Photo Profile
-                            storageReference1.putFile(photoLocation).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
+                            storageReference1.putFile(photoLocation)
+                                    .addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
                                 @Override
                                 public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
 
