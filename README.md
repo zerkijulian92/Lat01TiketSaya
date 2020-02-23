@@ -15,3 +15,7 @@ Aplikasi ini dibuat untuk tugas project di kelas online android BWA.
 # ScreenShoot
 ![tiketsaya - dribbble](https://user-images.githubusercontent.com/50509675/75112158-93419d00-5673-11ea-8adf-d19ff670a307.png)
 
+# Sertifikat Kelulusan
+![bwa-certificate-android-tiketsaya-zerky-yulyandri_001](https://user-images.githubusercontent.com/50509675/75112213-3b576600-5674-11ea-9467-119e51f4842f.jpg)
+
+
