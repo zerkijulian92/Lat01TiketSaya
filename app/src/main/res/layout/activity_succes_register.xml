@@ -56,16 +56,11 @@
 
             <Button
                 android:id="@+id/btn_explore"
-                android:layout_width="match_parent"
-                android:layout_height="55dp"
+                style="@style/btnBluePrimary"
                 android:layout_marginStart="48dp"
                 android:layout_marginTop="40dp"
                 android:layout_marginEnd="48dp"
-                android:background="@drawable/bg_btn_blue_primary"
-                android:fontFamily="@font/mmedium"
                 android:text="@string/text_explore_now"
-                android:textColor="@android:color/white"
-                android:textSize="20sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/please_fill" />

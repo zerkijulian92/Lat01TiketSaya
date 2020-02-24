@@ -148,32 +148,22 @@
 
             <Button
                 android:id="@+id/btn_view_ticket"
-                android:layout_width="match_parent"
-                android:layout_height="55dp"
+                style="@style/btnBluePrimary"
                 android:layout_marginStart="24dp"
                 android:layout_marginTop="40dp"
                 android:layout_marginEnd="24dp"
-                android:background="@drawable/bg_btn_blue_primary"
-                android:fontFamily="@font/mmedium"
                 android:text="EDIT PROFILE"
-                android:textColor="@android:color/white"
-                android:textSize="20sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
 
             <Button
                 android:id="@+id/btn_sign_out"
-                android:layout_width="match_parent"
-                android:layout_height="55dp"
+                style="@style/btnWhitePrimary"
                 android:layout_marginStart="24dp"
                 android:layout_marginTop="20dp"
                 android:layout_marginEnd="24dp"
-                android:background="@drawable/bg_btn_white_primary"
-                android:fontFamily="@font/mmedium"
-                android:text="SIGN OUT"
-                android:textColor="@color/grayText"
-                android:textSize="20sp"
+                android:text="@string/sign_out"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/btn_view_ticket" />

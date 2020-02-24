@@ -195,29 +195,20 @@
                 app:layout_constraintTop_toBottomOf="@+id/linearLayout">
 
                 <LinearLayout
+                    style="@style/btnSmallBackPrimary"
                     android:id="@+id/btn_back"
-                    android:layout_width="60dp"
-                    android:layout_height="55dp"
-                    android:layout_marginRight="16dp"
-                    android:background="@drawable/bg_layout_white"
-                    android:gravity="center">
+                    android:layout_marginRight="16dp">
 
                     <ImageView
                         android:layout_width="26dp"
                         android:layout_height="24dp"
                         android:src="@drawable/ic_back" />
-
                 </LinearLayout>
 
                 <Button
                     android:id="@+id/btn_refund"
-                    android:layout_width="match_parent"
-                    android:layout_height="55dp"
-                    android:background="@drawable/bg_btn_green"
-                    android:fontFamily="@font/mmedium"
-                    android:text="REFUND NOW"
-                    android:textColor="@android:color/white"
-                    android:textSize="20sp" />
+                    style="@style/btnGreenPrimary"
+                    android:text="REFUND NOW" />
             </LinearLayout>
 
         </androidx.constraintlayout.widget.ConstraintLayout>

@@ -44,4 +44,6 @@
     <string name="selamat_menikmati">Selamat Menikmati</string>
     <string name="view_tickets">VIEW TICKETS</string>
     <string name="zerky_yulyandri">Zerky Yulyandri</string>
+    <string name="my_dashboard">MY DASHBOARD</string>
+    <string name="sign_out">SIGN OUT</string>
 </resources>

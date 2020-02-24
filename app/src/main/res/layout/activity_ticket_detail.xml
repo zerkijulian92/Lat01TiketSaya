@@ -242,11 +242,8 @@
 
                 <LinearLayout
                     android:id="@+id/btn_back"
-                    android:layout_width="60dp"
-                    android:layout_height="55dp"
-                    android:layout_marginRight="16dp"
-                    android:background="@drawable/bg_layout_white"
-                    android:gravity="center">
+                    style="@style/btnSmallBackPrimary"
+                    android:layout_marginRight="16dp">
 
                     <ImageView
                         android:layout_width="26dp"
@@ -256,13 +253,9 @@
 
                 <Button
                     android:id="@+id/btn_buy_ticket"
-                    android:layout_width="match_parent"
-                    android:layout_height="55dp"
+                    style="@style/btnBluePrimary"
                     android:background="@drawable/bg_btn_blue_primary"
-                    android:fontFamily="@font/mmedium"
-                    android:text="@string/buy_ticket"
-                    android:textColor="@android:color/white"
-                    android:textSize="20sp" />
+                    android:text="@string/buy_ticket" />
 
             </LinearLayout>
 

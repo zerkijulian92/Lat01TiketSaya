@@ -99,18 +99,12 @@
                         android:lines="1"
                         android:paddingLeft="12dp"
                         android:textColor="@android:color/black" />
-
                 </LinearLayout>
 
                 <Button
                     android:id="@+id/btn_sign_in"
-                    android:layout_width="match_parent"
-                    android:layout_height="55dp"
-                    android:background="@drawable/bg_btn_blue_primary"
-                    android:fontFamily="@font/mmedium"
-                    android:text="@string/sign_in"
-                    android:textColor="@android:color/white"
-                    android:textSize="20sp" />
+                    style="@style/btnBluePrimary"
+                    android:text="@string/sign_in" />
             </LinearLayout>
 
             <TextView

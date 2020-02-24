@@ -8,4 +8,41 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <!-- Style Button Blue Primary-->
+    <style name="btnBluePrimary">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">55dp</item>
+        <item name="android:background">@drawable/bg_btn_blue_primary</item>
+        <item name="android:fontFamily">@font/mmedium</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <!-- Style Button White Primary-->
+    <style name="btnWhitePrimary">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">55dp</item>
+        <item name="android:background">@drawable/bg_btn_white_primary</item>
+        <item name="android:fontFamily">@font/mmedium</item>
+        <item name="android:textColor">@color/colorGrayPrimary</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <!-- Style Button Green Primary-->
+    <style name="btnGreenPrimary">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">55dp</item>
+        <item name="android:background">@drawable/bg_btn_green</item>
+        <item name="android:fontFamily">@font/mmedium</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <!-- Style Button Small Back Primary-->
+    <style name="btnSmallBackPrimary">
+        <item name="android:layout_width">60dp</item>
+        <item name="android:layout_height">55dp</item>
+        <item name="android:background">@drawable/bg_layout_white</item>
+        <item name="android:gravity">center</item>
+    </style>
 </resources>

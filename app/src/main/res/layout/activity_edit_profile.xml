@@ -271,11 +271,8 @@
 
                 <LinearLayout
                     android:id="@+id/btn_back"
-                    android:layout_width="60dp"
-                    android:layout_height="55dp"
-                    android:layout_marginRight="16dp"
-                    android:background="@drawable/bg_layout_white"
-                    android:gravity="center">
+                    style="@style/btnSmallBackPrimary"
+                    android:layout_marginRight="16dp">
 
                     <ImageView
                         android:layout_width="26dp"
