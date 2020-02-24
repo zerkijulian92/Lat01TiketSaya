@@ -22,7 +22,7 @@ public class RegisterOneAct extends AppCompatActivity {
     LinearLayout btnBack;
     Button btnContinue;
     EditText userName, passWord, emailAddress;
-    DatabaseReference reference;
+    DatabaseReference reference, reference_username;
 
     String USERNAME_KEY = "usernamekey";
     String username_key = "";
@@ -70,22 +70,47 @@ public class RegisterOneAct extends AppCompatActivity {
                         btnContinue.setText("CONTINUE");
                     }
                     else {
-                        //Menyimpan data kepada local Storage ( Handphone )
-                        SharedPreferences sharedPreferences = getSharedPreferences(USERNAME_KEY, MODE_PRIVATE);
-                        SharedPreferences.Editor editor = sharedPreferences.edit();
-                        editor.putString(username_key, userName.getText().toString());
-                        editor.apply();
 
-                        // simpan kepada database
-                        reference = FirebaseDatabase.getInstance().getReference().child("Users").child(userName.getText().toString());
-                        reference.addListenerForSingleValueEvent(new ValueEventListener() {
+                        // Mengambil username pada Firebase Database
+                        // Update: Username Validation Firebase
+                        reference_username = FirebaseDatabase.getInstance().getReference().child("Users").child(userName.getText().toString());
+                        reference_username.addListenerForSingleValueEvent(new ValueEventListener() {
                             @Override
                             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                                dataSnapshot.getRef().child("username").setValue(userName.getText().toString());
-                                dataSnapshot.getRef().child("password").setValue(passWord.getText().toString());
-                                dataSnapshot.getRef().child("email_address").setValue(emailAddress.getText().toString());
-                                dataSnapshot.getRef().child("user_balance").setValue(10000);
+                                // jika username tersedia
+                                if (dataSnapshot.exists()){
+                                    Toast.makeText(getApplicationContext(), "Username sudah tersedia!", Toast.LENGTH_SHORT).show();
+                                    // ubah state menjadi CONTINUE
+                                    btnContinue.setEnabled(true);
+                                    btnContinue.setText("CONTINUE");
+                                }
+                                else {
+                                    //Menyimpan data kepada local Storage ( Handphone )
+                                    SharedPreferences sharedPreferences = getSharedPreferences(USERNAME_KEY, MODE_PRIVATE);
+                                    SharedPreferences.Editor editor = sharedPreferences.edit();
+                                    editor.putString(username_key, userName.getText().toString());
+                                    editor.apply();
 
+                                    // simpan kepada database
+                                    reference = FirebaseDatabase.getInstance().getReference().child("Users").child(userName.getText().toString());
+                                    reference.addListenerForSingleValueEvent(new ValueEventListener() {
+                                        @Override
+                                        public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                                            dataSnapshot.getRef().child("username").setValue(userName.getText().toString());
+                                            dataSnapshot.getRef().child("password").setValue(passWord.getText().toString());
+                                            dataSnapshot.getRef().child("email_address").setValue(emailAddress.getText().toString());
+                                            dataSnapshot.getRef().child("user_balance").setValue(10000);
+                                        }
+
+                                        @Override
+                                        public void onCancelled(@NonNull DatabaseError databaseError) {
+                                            //pastekan kode disini
+                                        }
+                                    });
+                                    //berpindah activity
+                                    Intent gotoregistertwo = new Intent(RegisterOneAct.this, RegisterTwoAct.class);
+                                    startActivity(gotoregistertwo);
+                                }
                             }
 
                             @Override
@@ -93,11 +118,34 @@ public class RegisterOneAct extends AppCompatActivity {
 
                             }
                         });
-                        //berpindah activity
-                        Intent gotoregistertwo = new Intent(RegisterOneAct.this, RegisterTwoAct.class);
-                        startActivity(gotoregistertwo);
-                    }
 
+//                        //Menyimpan data kepada local Storage ( Handphone )
+//                        SharedPreferences sharedPreferences = getSharedPreferences(USERNAME_KEY, MODE_PRIVATE);
+//                        SharedPreferences.Editor editor = sharedPreferences.edit();
+//                        editor.putString(username_key, userName.getText().toString());
+//                        editor.apply();
+//
+//                        // simpan kepada database
+//                        reference = FirebaseDatabase.getInstance().getReference().child("Users").child(userName.getText().toString());
+//                        reference.addListenerForSingleValueEvent(new ValueEventListener() {
+//                            @Override
+//                            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+//                                dataSnapshot.getRef().child("username").setValue(userName.getText().toString());
+//                                dataSnapshot.getRef().child("password").setValue(passWord.getText().toString());
+//                                dataSnapshot.getRef().child("email_address").setValue(emailAddress.getText().toString());
+//                                dataSnapshot.getRef().child("user_balance").setValue(10000);
+//                            }
+//
+//                            @Override
+//                            public void onCancelled(@NonNull DatabaseError databaseError) {
+//                                //pastekan kode disini
+//                            }
+//                        });
+//                        //berpindah activity
+//                        Intent gotoregistertwo = new Intent(RegisterOneAct.this, RegisterTwoAct.class);
+//                        startActivity(gotoregistertwo);
+
+                    }
                 }
             }
         });
