@@ -1,4 +1,4 @@
-package com.takatutustudio.lat01tiketsaya;
+package com.zerkistudio.lat01tiketsaya;
 
 public class MyTicket {
     String nama_wisata, lokasi;

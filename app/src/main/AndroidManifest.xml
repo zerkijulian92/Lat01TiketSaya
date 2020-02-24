@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.takatutustudio.lat01tiketsaya">
+    package="com.zerkistudio.lat01tiketsaya">
     <uses-permission android:name="android.permission.INTERNET"/>
     <application
         android:allowBackup="true"
@@ -9,19 +9,19 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".EditProfileAct"></activity>
-        <activity android:name=".MyTicketDetailAct" />
-        <activity android:name=".MyProfileAct" />
-        <activity android:name=".SuccesBuyTicketAct" />
-        <activity android:name=".TicketCheckoutAct" />
-        <activity android:name=".TicketDetailAct" />
-        <activity android:name=".HomeAct" />
-        <activity android:name=".SuccesRegisterAct" />
-        <activity android:name=".RegisterTwoAct" />
-        <activity android:name=".RegisterOneAct" />
-        <activity android:name=".SigInAct" />
-        <activity android:name=".GetStartedAct" />
-        <activity android:name=".SplashAct">
+        <activity android:name="com.zerkistudio.lat01tiketsaya.EditProfileAct"></activity>
+        <activity android:name="com.zerkistudio.lat01tiketsaya.MyTicketDetailAct" />
+        <activity android:name="com.zerkistudio.lat01tiketsaya.MyProfileAct" />
+        <activity android:name="com.zerkistudio.lat01tiketsaya.SuccesBuyTicketAct" />
+        <activity android:name="com.zerkistudio.lat01tiketsaya.TicketCheckoutAct" />
+        <activity android:name="com.zerkistudio.lat01tiketsaya.TicketDetailAct" />
+        <activity android:name="com.zerkistudio.lat01tiketsaya.HomeAct" />
+        <activity android:name="com.zerkistudio.lat01tiketsaya.SuccesRegisterAct" />
+        <activity android:name="com.zerkistudio.lat01tiketsaya.RegisterTwoAct" />
+        <activity android:name="com.zerkistudio.lat01tiketsaya.RegisterOneAct" />
+        <activity android:name="com.zerkistudio.lat01tiketsaya.SigInAct" />
+        <activity android:name="com.zerkistudio.lat01tiketsaya.GetStartedAct" />
+        <activity android:name="com.zerkistudio.lat01tiketsaya.SplashAct">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

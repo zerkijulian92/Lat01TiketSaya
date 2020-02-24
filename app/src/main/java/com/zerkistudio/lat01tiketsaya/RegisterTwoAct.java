@@ -1,4 +1,4 @@
-package com.takatutustudio.lat01tiketsaya;
+package com.zerkistudio.lat01tiketsaya;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
