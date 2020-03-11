@@ -80,6 +80,7 @@ public class MyProfileAct extends AppCompatActivity {
         photoProfile.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                finish();
                 Intent gotohome = new Intent(MyProfileAct.this, HomeAct.class);
                 startActivity(gotohome);
             }
@@ -89,6 +90,7 @@ public class MyProfileAct extends AppCompatActivity {
         btnEditProfile.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                finish();
                 Intent gotoeditprofile = new Intent(MyProfileAct.this, EditProfileAct.class);
                 startActivity(gotoeditprofile);
             }

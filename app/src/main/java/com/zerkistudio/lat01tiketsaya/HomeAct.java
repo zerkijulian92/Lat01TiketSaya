@@ -75,6 +75,7 @@ public class HomeAct extends AppCompatActivity {
         btnTicketPisa.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                finish();
                 Intent gotopisaticket = new Intent(HomeAct.this, TicketDetailAct.class);
                 //meletakan data ke intent
                 gotopisaticket.putExtra("jenis_tiket", "Pisa");
@@ -86,6 +87,7 @@ public class HomeAct extends AppCompatActivity {
         btnTicketTorri.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                finish();
                 Intent gototorriticket = new Intent(HomeAct.this, TicketDetailAct.class);
                 gototorriticket.putExtra("jenis_tiket", "Torri");
                 startActivity(gototorriticket);
@@ -96,6 +98,7 @@ public class HomeAct extends AppCompatActivity {
         btnTicketPagoda.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                finish();
                 Intent gotopagodaticket = new Intent(HomeAct.this, TicketDetailAct.class);
                 gotopagodaticket.putExtra("jenis_tiket", "Pagoda");
                 startActivity(gotopagodaticket);
@@ -106,6 +109,7 @@ public class HomeAct extends AppCompatActivity {
         btnTicketCandi.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                finish();
                 Intent gotocanditicket = new Intent(HomeAct.this, TicketDetailAct.class);
                 gotocanditicket.putExtra("jenis_tiket", "Candi");
                 startActivity(gotocanditicket);
@@ -116,6 +120,7 @@ public class HomeAct extends AppCompatActivity {
         btnTicketSphinx.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                finish();
                 Intent gotosphinxticket = new Intent(HomeAct.this, TicketDetailAct.class);
                 gotosphinxticket.putExtra("jenis_tiket", "Sphinx");
                 startActivity(gotosphinxticket);
@@ -126,6 +131,7 @@ public class HomeAct extends AppCompatActivity {
         btnTicketMonas.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                finish();
                 Intent gotomonasticket =  new Intent(HomeAct.this, TicketDetailAct.class);
                 gotomonasticket.putExtra("jenis_tiket", "Monas");
                 startActivity(gotomonasticket);
@@ -136,6 +142,7 @@ public class HomeAct extends AppCompatActivity {
         btnToProfile.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                finish();
                 Intent gotomyprofile = new Intent(HomeAct.this, MyProfileAct.class);
                 startActivity(gotomyprofile);
             }

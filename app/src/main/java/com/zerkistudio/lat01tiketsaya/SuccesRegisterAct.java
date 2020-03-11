@@ -43,6 +43,7 @@ public class SuccesRegisterAct extends AppCompatActivity {
         btnExplore.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                finish();
                 Intent gotohome = new Intent(SuccesRegisterAct.this, HomeAct.class);
                 startActivity(gotohome);
             }

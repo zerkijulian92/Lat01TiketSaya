@@ -46,6 +46,7 @@ public class SuccesBuyTicketAct extends AppCompatActivity {
         btnMyDashboard.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                finish();
                 Intent gotomydashboard = new Intent(SuccesBuyTicketAct.this, HomeAct.class);
                 startActivity(gotomydashboard);
             }
@@ -55,6 +56,7 @@ public class SuccesBuyTicketAct extends AppCompatActivity {
         btnViewTicket.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                finish();
                 Intent gotoviewticket = new Intent(SuccesBuyTicketAct.this, MyProfileAct.class);
                 startActivity(gotoviewticket);
             }

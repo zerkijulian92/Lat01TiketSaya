@@ -75,6 +75,7 @@ public class TicketDetailAct extends AppCompatActivity {
         btnBuyTicket.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                finish();
                 Intent gotocheckout = new Intent(TicketDetailAct.this, TicketCheckoutAct.class);
                 // meletekan data kepada intent
                 gotocheckout.putExtra("jenis_tiket", jenis_tiket_baru);

@@ -126,6 +126,7 @@ public class RegisterTwoAct extends AppCompatActivity {
                                         @Override
                                         public void onComplete(@NonNull Task<Uri> task) {
                                             //berpindah activity
+                                            finish();
                                             Intent gotosuccesregister = new Intent(RegisterTwoAct.this, SuccesRegisterAct.class);
                                             startActivity(gotosuccesregister);
                                         }

@@ -108,6 +108,7 @@ public class RegisterOneAct extends AppCompatActivity {
                                         }
                                     });
                                     //berpindah activity
+                                    finish();
                                     Intent gotoregistertwo = new Intent(RegisterOneAct.this, RegisterTwoAct.class);
                                     startActivity(gotoregistertwo);
                                 }

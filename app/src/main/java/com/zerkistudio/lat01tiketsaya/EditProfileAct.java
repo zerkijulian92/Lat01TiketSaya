@@ -76,6 +76,7 @@ public class EditProfileAct extends AppCompatActivity {
                 edtNamaLengkap.setText(dataSnapshot.child("nama_lengkap").getValue().toString());
                 edtBio.setText(dataSnapshot.child("bio").getValue().toString());
                 edtUsername.setText(dataSnapshot.child("username").getValue().toString());
+                edtUsername.setEnabled(false);
                 edtPassword.setText(dataSnapshot.child("password").getValue().toString());
                 edtEmailAddress.setText(dataSnapshot.child("email_address").getValue().toString());
                 Picasso.with(EditProfileAct.this)
@@ -156,6 +157,7 @@ public class EditProfileAct extends AppCompatActivity {
                             }
                         });
                         // Berpindah activity ketika data di EditText sudah terisi
+                        finish();
                         Intent gotobackprofile = new Intent(EditProfileAct.this, MyProfileAct.class);
                         startActivity(gotobackprofile);
 
@@ -181,6 +183,7 @@ public class EditProfileAct extends AppCompatActivity {
                                                 @Override
                                                 public void onComplete(@NonNull Task<Uri> task) {
                                                     // Berpindah activity ketika update photo profile
+                                                    finish();
                                                     Intent gotobackprofile = new Intent(EditProfileAct.this, MyProfileAct.class);
                                                     startActivity(gotobackprofile);
                                                 }

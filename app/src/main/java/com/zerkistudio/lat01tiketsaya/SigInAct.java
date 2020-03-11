@@ -42,6 +42,7 @@ public class SigInAct extends AppCompatActivity {
         btnCreateNewAccount.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                finish();
                 Intent gotoregisterone = new Intent(SigInAct.this, RegisterOneAct.class);
                 startActivity(gotoregisterone);
             }
@@ -89,6 +90,7 @@ public class SigInAct extends AppCompatActivity {
                                         editor.apply();
 
                                         //berpindah activity ke home
+                                        finish();
                                         Intent gotohome = new Intent(SigInAct.this, HomeAct.class);
                                         startActivity(gotohome);
                                     } else {

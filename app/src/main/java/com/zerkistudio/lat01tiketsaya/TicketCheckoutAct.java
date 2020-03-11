@@ -187,6 +187,7 @@ public class TicketCheckoutAct extends AppCompatActivity {
                         reference3.getRef().child("date_wisata").setValue(dateWisata);
                         reference3.getRef().child("time_wisata").setValue(timeWisata);
 
+                        finish();
                         Intent gotosuccesbuyticket = new Intent(TicketCheckoutAct.this, SuccesBuyTicketAct.class);
                         startActivity(gotosuccesbuyticket);
 
