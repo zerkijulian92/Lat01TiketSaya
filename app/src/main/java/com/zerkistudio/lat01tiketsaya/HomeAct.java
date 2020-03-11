@@ -10,6 +10,7 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.github.florent37.shapeofview.shapes.CircleView;
 import com.google.firebase.database.DataSnapshot;
@@ -30,6 +31,10 @@ public class HomeAct extends AppCompatActivity {
     String USERNAME_KEY     = "usernamekey";
     String username_key     = "";
     String username_key_new = "";
+
+    // Function "Tekan Sekali Lagi Untuk Keluar"
+    private static final int TIME_INTERVAL = 2000;
+    private long mBackPresed;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -148,6 +153,31 @@ public class HomeAct extends AppCompatActivity {
             }
         });
     }
+
+    // Function "Tekan Sekali Lagi Untuk Keluar"
+    @Override
+    public void onBackPressed() {
+        if (mBackPresed + TIME_INTERVAL > System.currentTimeMillis()) {
+            super.onBackPressed();
+            finish();
+            // Menghapus isi / nilai / value dari username local
+            SharedPreferences sharedPreferences = getSharedPreferences(USERNAME_KEY, MODE_PRIVATE);
+            SharedPreferences.Editor editor = sharedPreferences.edit();
+            editor.putString(username_key, null);
+            editor.apply();
+
+            // Berpindah Activity
+            Intent gotosignin = new Intent(HomeAct.this, SigInAct.class);
+            startActivity(gotosignin);
+            finish();
+            return;
+        }
+        else {
+            Toast.makeText(getBaseContext(), "Tekan Sekali lagi untuk keluar", Toast.LENGTH_SHORT).show();
+            mBackPresed = System.currentTimeMillis();
+        }
+    }
+    //---
 
     //getUsernameLocal
     public void  getUsernameLocal(){
