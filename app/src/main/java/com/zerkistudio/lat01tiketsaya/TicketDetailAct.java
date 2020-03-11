@@ -87,7 +87,16 @@ public class TicketDetailAct extends AppCompatActivity {
         btnBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                onBackPressed();
+//                onBackPressed();
+
+                // onBackPrassed dimatikan
+                // karena menggunakan finish() untuk menghapus activity yang menimban
+                // sebagai gantinya menggunakan intent dan ditambah finish() untuk menghapus activity yg menimban
+
+                finish();
+                Intent gotobackhome = new Intent(TicketDetailAct.this, HomeAct.class);
+                startActivity(gotobackhome);
+
             }
         });
     }

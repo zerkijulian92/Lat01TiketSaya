@@ -222,7 +222,15 @@ public class TicketCheckoutAct extends AppCompatActivity {
         btnBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                onBackPressed();
+//                onBackPressed();
+
+                // onBackPrassed dimatikan
+                // karena menggunakan finish() untuk menghapus activity yang menimban
+                // sebagai gantinya menggunakan intent dan ditambah finish() untuk menghapus activity yg menimban
+
+                finish();
+                Intent gotobacticketdetail= new Intent(TicketCheckoutAct.this, TicketDetailAct.class);
+                startActivity(gotobacticketdetail);
             }
         });
     }

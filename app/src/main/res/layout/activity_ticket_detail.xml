@@ -133,7 +133,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/mregular"
-                            android:text="Tripod everywhere"
+                            tools:text="Tripod everywhere"
                             android:textSize="14sp" />
                     </LinearLayout>
 
@@ -169,7 +169,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/mregular"
-                            android:text="@string/connect_for_any_tourist"
+                            tools:text="@string/connect_for_any_tourist"
                             android:textSize="14sp" />
                     </LinearLayout>
 
@@ -197,7 +197,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/mregular"
-                            android:text="@string/_13_festivals"
+                            tools:text="@string/_13_festivals"
                             android:textColor="@android:color/black"
                             android:textSize="16sp" />
 
@@ -205,7 +205,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/mregular"
-                            android:text="@string/dance_and_foods"
+                            tools:text="@string/dance_and_foods"
                             android:textSize="14sp" />
                     </LinearLayout>
 
