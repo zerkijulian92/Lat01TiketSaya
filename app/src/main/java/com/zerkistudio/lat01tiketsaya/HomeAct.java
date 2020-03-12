@@ -170,7 +170,6 @@ public class HomeAct extends AppCompatActivity {
             Intent gotosignin = new Intent(HomeAct.this, SigInAct.class);
             startActivity(gotosignin);
             finish();
-            return;
         }
         else {
             Toast.makeText(getBaseContext(), "Tekan Sekali lagi untuk keluar", Toast.LENGTH_SHORT).show();

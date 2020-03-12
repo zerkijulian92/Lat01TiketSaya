@@ -1,10 +1,12 @@
 package com.zerkistudio.lat01tiketsaya;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -119,6 +121,25 @@ public class MyProfileAct extends AppCompatActivity {
         btnSignOut.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+              exit(); // Memanggil Class Function Exit
+            }
+        });
+    }
+
+    // MEMBUAT CLASS FUNCTION EXIT
+    public void exit() {
+        AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this);
+        // Setting Alert Dialog Judul
+        alertDialogBuilder.setTitle("Konfirmasi Keluar");
+
+        // Setting Alert Dialog Pesan
+        alertDialogBuilder.setMessage("Apakah anda yakin akan keluar dari aplikasi ?");
+        alertDialogBuilder.setCancelable(false);
+
+        // Membuat Function YES (setPositiveButton)
+        alertDialogBuilder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
                 // Menghapus isi / nilai / value dari username local
                 SharedPreferences sharedPreferences = getSharedPreferences(USERNAME_KEY, MODE_PRIVATE);
                 SharedPreferences.Editor editor = sharedPreferences.edit();
@@ -131,8 +152,21 @@ public class MyProfileAct extends AppCompatActivity {
                 finish();
             }
         });
+
+        // Membuat Function No (setNegativeButton)
+        alertDialogBuilder.setNegativeButton("No", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+                // Pastekan Kode Disini jika ingin membuat function Toast dll.
+            }
+        });
+
+        // Memunculkan PopUp Alert
+        AlertDialog alertDialog = alertDialogBuilder.create();
+        alertDialog.show();
     }
 
+   // CLASS GETUSERNAMELOCAL
     public  void  getUsernameLocal(){
         SharedPreferences sharedPreferences = getSharedPreferences(USERNAME_KEY, MODE_PRIVATE);
         username_key_new = sharedPreferences.getString(username_key, "");
